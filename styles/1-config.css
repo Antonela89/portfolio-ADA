@@ -1,0 +1,12 @@
+/* font:
+  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif; */
+
+  :root {
+    --background-color: #121212; /* Negro profundo, no puro */
+    --primary-text-color: #e0e0e0; /* Blanco grisáceo para no cansar la vista */
+    --secondary-text-color: #a0a0a0; /* Gris medio para detalles */
+    --accent-color: #bb86fc; /* Púrpura neón como color de acento */
+    --card-background-color: #1e1e1e; /* Un gris muy oscuro para las tarjetas */
+    --secondary-accent-color: #03dac6; /* Turquesa para un segundo acento */
+}
