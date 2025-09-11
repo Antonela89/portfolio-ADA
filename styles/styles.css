@@ -1,2 +1,11 @@
 /* Importación de archivos de estilos de cada elemento del archivo html */
 @import '1-config.css';
+@import '2-header.css';
+@import '3-main.css';
+@import '4-section-sobreMi.css';
+@import '5-section-conocimientos.css';
+@import '6-section-frase.css';
+@import '7-section-proyectos.css';
+@import '8-section-contacto.css';
+@import '9-footer.css';
+
