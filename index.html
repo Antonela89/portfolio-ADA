@@ -44,68 +44,89 @@
       <nav class="encabezado__nav">
         <ul class="encabezado__lista">
           <li class="encabezado__item">
-            <a class="encabezado__link" href="#sobre">sobre mi</a>
+            <a class="encabezado__link" href="#sobre">
+              <span class="link__texto">sobre mi</span>
+            </a>
           </li>
           <li class="encabezado__item">
-            <a class="encabezado__link" href="#conocimientos">conocimientos</a>
+            <a class="encabezado__link" href="#conocimientos">
+              <span class="link__texto">conocimientos</span>
+            </a>
           </li>
           <li class="encabezado__item">
-            <a class="encabezado__link" href="#proyectos">proyectos</a>
+            <a class="encabezado__link" href="#proyectos">
+              <span class="link__texto">proyectos</span>
+            </a>
           </li>
           <li class="encabezado__item">
-            <a class="encabezado__link" href="#contacto">contacto</a>
+            <a class="encabezado__link" href="#contacto">
+              <span class="link__texto">contacto</span>
+            </a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="principal">
-      <section
-        class="principal__section principal__section--sobre"
-        id="sobre"
-      ></section>
+      <section class="principal__section principal__section--sobre" id="sobre">
+        <h2 class="principal__titulo">sobre mi</h2>
+      </section>
       <section
         class="principal__section principal__section--conocimientos"
         id="conocimientos"
       >
+        <h2 class="principal__titulo">conocimientos</h2>
         <div class="tarjetas-conocimientos">
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-figma"></i>
+            <i class="fa-brands fa-html5 tarjetas-conocimientos__icono"></i>
+            <h3 class="tarjetas-conocimientos__titulo">html</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-css3"></i>
+            <i class="fa-brands fa-css3 tarjetas-conocimientos__icono"></i>
+            <h3 class="tarjetas-conocimientos__titulo">ccs3</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-bootstrap tarjetas-conocimientos__icono"></i>
+            <h3 class="tarjetas-conocimientos__titulo">bootstrap</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-js"></i>
+            <i class="fa-brands fa-js tarjetas-conocimientos__icono"></i>
+            <h3 class="tarjetas-conocimientos__titulo">js</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-git"></i>
+            <i class="fa-brands fa-figma tarjetas-conocimientos__icono"></i>
+            <h3 class="tarjetas-conocimientos__titulo">figma</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-git tarjetas-conocimientos__icono"></i>
+            <h3 class="tarjetas-conocimientos__titulo">git</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-python"></i>
+            <i class="fa-brands fa-github tarjetas-conocimientos__icono"></i>
+            <h3 class="tarjetas-conocimientos__titulo">github</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-react"></i>
+            <i class="fa-brands fa-trello tarjetas-conocimientos__icono"></i>
+            <h3 class="tarjetas-conocimientos__titulo">trello</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-bootstrap"></i>
+            <i class="fa-brands fa-react tarjetas-conocimientos__icono"></i>
+            <h3 class="tarjetas-conocimientos__titulo">react</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-node"></i>
+            <i class="fa-brands fa-angular tarjetas-conocimientos__icono"></i>
+            <h3 class="tarjetas-conocimientos__titulo">angular</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-          <i class="fa-brands fa-trello"></i>
+            <i class="fa-brands fa-node tarjetas-conocimientos__icono"></i>
+            <h3 class="tarjetas-conocimientos__titulo">node</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-          <i class="fa-brands fa-markdown"></i>
+            <i class="fa-brands fa-python tarjetas-conocimientos__icono"></i>
+            <h3 class="tarjetas-conocimientos__titulo">python</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-         <i class="fa-brands fa-angular"></i>
+            <i class="fa-brands fa-markdown tarjetas-conocimientos__icono"></i>
+            <h3 class="tarjetas-conocimientos__titulo">markdown</h3>
           </article>
         </div>
       </section>
@@ -114,6 +135,7 @@
         class="principal__section principal__section--proyectos"
         id="proyectos"
       >
+        <h2 class="principal__titulo">proyectos</h2>
         <div class="tarjetas-proyectos">
           <article class="tarjetas-proyectos__tarjetas"></article>
           <article class="tarjetas-proyectos__tarjetas"></article>
@@ -129,8 +151,8 @@
         class="principal__section principal__section--contacto"
         id="contacto"
       >
+        <h2 class="principal__titulo">contacto</h2>
         <form action="" class="formulario">
-          <h2 class="formulario__titulo">Contacto</h2>
           <div class="formulario__fila">
             <p class="formulario__campo">
               <label for="nombre">nombre</label>
@@ -167,35 +189,35 @@
         </ul>
       </nav>
       <nav class="pie__nav">
-        <ul class="pie__lista">
+        <ul class="pie__lista pie__lista--redes">
           <li class="pie__item">
             <a class="pie__link" href=""
-              ><i class="fa-brands fa-github pie__icono"></i
+              ><i class="fa-brands fa-github pie__icono--redes"></i
             ></a>
           </li>
           <li class="pie__item">
             <a class="pie__link" href=""
-              ><i class="fa-brands fa-facebook pie__icono"></i
+              ><i class="fa-brands fa-facebook pie__icono--redes"></i
             ></a>
           </li>
           <li class="pie__item">
             <a class="pie__link" href=""
-              ><i class="fa-brands fa-linkedin pie__icono"></i
+              ><i class="fa-brands fa-linkedin pie__icono--redes"></i
             ></a>
           </li>
           <li class="pie__item">
             <a class="pie__link" href=""
-              ><i class="fa-brands fa-discord pie__icono"></i
+              ><i class="fa-brands fa-discord pie__icono--redes"></i
             ></a>
           </li>
           <li class="pie__item">
             <a class="pie__link" href=""
-              ><i class="fa-brands fa-google pie__icono"></i
+              ><i class="fa-brands fa-google pie__icono--redes"></i
             ></a>
           </li>
         </ul>
       </nav>
-      <p class="pie__parrafo"></p>
+      <p class="pie__parrafo">ADA ITW - Portfolio</p>
     </footer>
   </body>
 </html>
