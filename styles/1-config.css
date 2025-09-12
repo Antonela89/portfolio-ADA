@@ -22,4 +22,6 @@
 body {
   width: 100vw;
   min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
 }
