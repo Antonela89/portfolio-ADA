@@ -155,21 +155,42 @@
         <form action="" class="formulario">
           <div class="formulario__fila">
             <p class="formulario__campo">
-              <label for="nombre">nombre</label>
-              <input type="text" name="nombre" name="nombre" />
+              <label class="campo__label" for="nombre">nombre:</label>
+              <input
+                class="campo__input"
+                type="text"
+                name="nombre"
+                name="nombre"
+              />
             </p>
             <p class="formulario__campo">
-              <label for="apellido">apellido</label>
-              <input type="text" name="apellido" name="apellido" />
+              <label class="campo__label" for="apellido">apellido:</label>
+              <input
+                class="campo__input"
+                type="text"
+                name="apellido"
+                name="apellido"
+              />
             </p>
           </div>
           <p class="formulario__campo">
-            <label for="email">e-mail</label>
-            <input type="email" name="email" name="email" />
+            <label class="campo__label" for="email">e-mail:</label>
+            <input
+              class="campo__input"
+              type="email"
+              name="email"
+              name="email"
+            />
           </p>
-          <textarea name="" id=""></textarea>
+          <p class="formulario__campo">
+            <label class="campo__label" for="mensaje">mensaje:</label>
+            <textarea  class="campo__input campo__input--textarea" name="mensaje" id="mensaje"></textarea>
+          </p>
         </form>
-      </section>
+        <div class="formulario__botones">
+          <button type="reset">Limpiar</button>
+          <button type="submit">Enviar</button>
+        </div>
     </main>
     <footer class="pie">
       <nav class="pie__nav">
