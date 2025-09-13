@@ -46,8 +46,8 @@
     }
 
     .tarjetas-conocimientos__tarjeta {
-        max-width: calc((100% - 2.5rem)/3);
-        flex: 1 1 calc((100% - 2.5rem)/3);
+        max-width: calc((100% - 1.5rem)/3);
+        flex: 1 1 calc((100% - 1.5rem) / 3);
     }
 }
 
@@ -58,7 +58,7 @@
     }
 
     .tarjetas-conocimientos__tarjeta {
-        max-width: calc((100% - 6rem)/5);
-        flex: 1 1 calc((100% - 6rem)/5);
+        max-width: calc((100% - 4rem)/5);
+        flex: 1 1 calc((100% - 4rem) / 5);
     }
 }
