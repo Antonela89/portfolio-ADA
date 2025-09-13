@@ -75,12 +75,12 @@
     outline: 2px solid var(--secondary-accent-color);
 }
 
-.formulario__boton--enviar {
-    background-color: var(--accent-color);
-}
-
 .formulario__boton:hover {
     transform: scale(1.2);
+}
+
+.formulario__boton--enviar:hover {
+    background-color: var(--accent-color);
 }
 
 /* responsive */
