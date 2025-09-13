@@ -1,0 +1,46 @@
+/* first mobile */
+.principal__section--frase {
+    background-color: var(--accent-color);
+    text-align: center;
+    font-family: var(--poppins);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.frase__cita {
+    font-weight: bold;
+}
+
+.frase__autor {
+    font-style: italic;
+}
+
+/* responsive */
+/* tablet */
+@media (min-width: 768px) {
+    .principal__section--frase {
+        font-size: 1.5rem;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .frase__cita {
+        text-align: center;
+    }
+
+    .frase__autor {
+        text-align: end;
+    }
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+    .principal__section--frase {
+        font-size: 2rem;
+        padding: 2rem;
+        margin: 2rem 0;
+    }
+}
