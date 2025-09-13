@@ -123,7 +123,6 @@
         }
 
         .encabezado:hover::before {
-            opacity: 0;
             transition: opacity 0.2s ease;
         }
     }
@@ -131,7 +130,6 @@
     @keyframes fadeOutOnScroll {
         from {
             opacity: 1;
-            /* Totalmente sólido al inicio (scroll 0) */
         }
 
         to {
