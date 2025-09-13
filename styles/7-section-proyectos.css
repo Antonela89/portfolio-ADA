@@ -1,0 +1,136 @@
+/* first mobile */
+.principal__section--proyectos {
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+/* Contenedor del carrusel */
+.tarjetas-proyectos {
+  width: 100%;
+  height: auto;
+  display: flex;
+  overflow-x: auto;
+  /* Permite el scroll horizontal */
+  scroll-snap-type: x mandatory;
+  /* Activa el "snap" en el eje X */
+  -webkit-overflow-scrolling: touch;
+  /* Scroll suave en dispositivos móviles */
+  padding: 1.5rem 0;
+}
+
+/* Ocultar la barra de scroll estándar */
+.tarjetas-proyectos::-webkit-scrollbar {
+  display: none;
+}
+
+/* Tarjeta individual del proyecto */
+.tarjetas-proyectos__tarjeta {
+  /* Cada tarjeta ocupa el 80% del ancho del contenedor */
+  flex: 0 0 80%;
+  max-width: 25rem;
+  margin: 0 1rem;
+  scroll-snap-align: center;
+  /* Centra la tarjeta al hacer "snap" */
+  background-color: var(--accent-color-transparencia);
+  border-radius: 0.25rem;
+  box-shadow: 0 5px 15px var(--primary-text-color);
+  /* box-shadow: 0 5px 15px var(--secondary-accent-color); */
+  padding: 0.25rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.tarjetas-proyectos__tarjeta:hover {
+  transform: translateY(-10px);
+}
+
+.tarjeta-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.tarjeta-iframe-contenedor {
+  border-radius: 0.25rem;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.tarjeta-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 1280px;
+  height: 720px;
+  /* Ajusta este valor: (ancho de la tarjeta) / 1280 */
+  /* Si tu tarjeta mide max-width: 400px, entonces 400 / 1280 = 0.3125 */
+  transform: scale(0.3125);
+
+  /* Importante: la transformación debe originarse en la esquina superior izquierda */
+  transform-origin: 0 0;
+
+  /* Deshabilita los clics dentro del iframe */
+  pointer-events: none;
+}
+
+
+.tarjeta-contenido {
+  padding: 1.5rem 0;
+}
+
+.tarjeta-contenido h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.tarjeta-contenido p {
+  font-size: 1rem;
+  color: var(--secondary-text-color);
+}
+
+.tarjeta-github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  color: var(--background-color);
+  background-color: var(--secondary-accent-color);
+  transition: background-color 0.3s ease;
+}
+
+.tarjeta-github:hover {
+  background-color: var(--accent-color);
+}
+
+.tarjeta__icono {
+  font-size: 1.5rem;
+  color: var(--background-color);
+  transition: all 0.3 ease;
+}
+
+.tarjeta-github:hover .tarjeta__icono {
+  color: var(--primary-text-color);
+  transform: scale(1.5);
+  -webkit-text-stroke: 1px var(--background-color);
+}
+
+/* Media query para pantallas más grandes */
+@media (min-width: 768px) {
+  .tarjetas-proyectos__tarjetas {
+    flex-basis: 45%;
+    /* Muestra dos tarjetas y un poco de la siguiente */
+  }
+}
+
+@media (min-width: 1024px) {
+  .tarjetas-proyectos__tarjetas {
+    flex-basis: 30%;
+    /* Muestra tres tarjetas */
+  }
+}
