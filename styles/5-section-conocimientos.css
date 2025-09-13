@@ -10,7 +10,7 @@
 }
 
 .tarjetas-conocimientos__tarjeta {
-    width: calc(50% - 0.5rem);
+    max-width: calc(50% - 0.5rem);
     display: flex;
     flex-direction: column;
     align-items: center;
