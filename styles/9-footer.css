@@ -8,7 +8,14 @@
     background-color: var(--secondary-accent-color);
     color: var(--background-color);
     border-top: 1rem solid var(--accent-color);
-    gap: 1.5rem;
+    gap: 1rem;
+}
+
+.pie__contenido-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .pie__lista,
@@ -68,20 +75,14 @@
 /* tablet */
 @media (min-width: 768px) {
     .pie {
-        position: relative;
+        padding: 2rem;
+        gap: 0.75rem;
+    }
+
+    .pie__contenido-principal {
+        width: 100%;
         flex-direction: row;
         justify-content: space-between;
-        padding: 2rem;
-    }
-
-    .pie__nav {
-        margin: 1rem 0;
-    }
-
-    .pie__parrafo {
-        position: absolute;
-        bottom: 0.5rem;
-        left: calc(50% - 4rem);
     }
 }
 
