@@ -1,4 +1,8 @@
 /* mobile first */
+.principal__section--sobre {
+    align-items: center;
+}
+
 .sobre {
     display: flex;
     padding: 1rem;
@@ -15,6 +19,7 @@
 
 .sobre__imagen {
     width: 100%;
+
     object-fit: cover;
 }
 
@@ -28,7 +33,25 @@
 }
 
 .descripcion__mobile {
-    display: flex;
+    text-align: center;
+}
+
+.sobre__enlace {
+    max-width: 80%;
+    flex: 1 1 80%;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--primary-text-color);
+    color: var(--background-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.sobre__enlace:hover {
+    transform: scale(1.1);
+    background-color: var(--secondary-accent-color)
 }
 
 /* responsive */
@@ -64,11 +87,36 @@
     .sobre::after {
         bottom: 0;
     }
+
+    .sobre__enlace {
+        max-width: 45%;
+        flex-basis: 45%;
+        padding: 0.75rem;
+        position: relative;
+        bottom: 4.25rem;
+    }
 }
 
 /* desktop */
 @media (min-width: 1024px) {
+
+    .sobre::before,
+    .sobre::after {
+        height: 6rem;
+    }
+
+    .sobre__imagen {
+        height: 40rem;
+    }
+
     .descripcion__tablet {
         font-size: 1.5rem;
+    }
+
+    .sobre__enlace {
+        max-width: 30%;
+        flex-basis: 30%;
+        font-size: 1.5rem;
+        bottom: 5.5rem;
     }
 }
