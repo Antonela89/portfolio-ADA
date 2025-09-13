@@ -39,9 +39,13 @@
     />
   </head>
   <body>
-    <header class="encabezado">
+    <header class="encabezado" role="banner">
       <h1 class="encabezado__titulo">Antonela Borgogno</h1>
-      <nav class="encabezado__nav">
+      <nav
+        class="encabezado__nav"
+        role="navigation"
+        aria-label="Navegación principal"
+      >
         <ul class="encabezado__lista">
           <li class="encabezado__item">
             <a class="encabezado__link" href="#sobre">
@@ -66,12 +70,20 @@
         </ul>
       </nav>
     </header>
-    <main class="principal">
-      <section class="principal__section principal__section--sobre" id="sobre">
-        <h2 class="principal__titulo">sobre mi</h2>
+    <main class="principal" role="main">
+      <section
+        class="principal__section principal__section--sobre"
+        id="sobre"
+        aria-labelledby="titulo-sobre-mi"
+      >
+        <h2 class="principal__titulo" id="titulo-sobre-mi">sobre mi</h2>
         <div class="sobre">
           <picture class="sobre-contenedor-imagen">
-            <img class="sobre__imagen" src="/images/banner/banner.png" alt="" />
+            <img
+              class="sobre__imagen"
+              src="/images/banner/banner.png"
+              alt="Fotografía de perfil de Antonela Borgogono"
+            />
           </picture>
           <div class="sobre__descripcion">
             <p class="descripcion__tablet">
@@ -84,7 +96,8 @@
               contribuir a proyectos innovadores.
             </p>
             <p class="descripcion__mobile">
-              <b>Desarrolladora Web | Front-End con React | Back-End | IA.</b> <br>
+              <b>Desarrolladora Web | Front-End con React | Back-End | IA.</b>
+              <br />
               Convierto ideas en interfaces limpias y funcionales con una gran
               atención al detalle.
             </p>
@@ -95,86 +108,139 @@
       <section
         class="principal__section principal__section--conocimientos"
         id="conocimientos"
+        aria-labelledby="titulo-conocimientos"
       >
-        <h2 class="principal__titulo">conocimientos</h2>
+        <h2 class="principal__titulo" id="titulo-conocimientos">
+          conocimientos
+        </h2>
         <div class="tarjetas-conocimientos">
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-html5 tarjetas-conocimientos__icono"></i>
+            <i
+              class="fa-brands fa-html5 tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
             <h3 class="tarjetas-conocimientos__titulo">html</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-css3 tarjetas-conocimientos__icono"></i>
+            <i
+              class="fa-brands fa-css3 tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
             <h3 class="tarjetas-conocimientos__titulo">ccs3</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-bootstrap tarjetas-conocimientos__icono"></i>
+            <i
+              class="fa-brands fa-bootstrap tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
             <h3 class="tarjetas-conocimientos__titulo">bootstrap</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-js tarjetas-conocimientos__icono"></i>
+            <i
+              class="fa-brands fa-js tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
             <h3 class="tarjetas-conocimientos__titulo">js</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-figma tarjetas-conocimientos__icono"></i>
+            <i
+              class="fa-brands fa-figma tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
             <h3 class="tarjetas-conocimientos__titulo">figma</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-git tarjetas-conocimientos__icono"></i>
+            <i
+              class="fa-brands fa-git tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
             <h3 class="tarjetas-conocimientos__titulo">git</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-github tarjetas-conocimientos__icono"></i>
+            <i
+              class="fa-brands fa-github tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
             <h3 class="tarjetas-conocimientos__titulo">github</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-trello tarjetas-conocimientos__icono"></i>
+            <i
+              class="fa-brands fa-trello tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
             <h3 class="tarjetas-conocimientos__titulo">trello</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-react tarjetas-conocimientos__icono"></i>
+            <i
+              class="fa-brands fa-react tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
             <h3 class="tarjetas-conocimientos__titulo">react</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-angular tarjetas-conocimientos__icono"></i>
+            <i
+              class="fa-brands fa-angular tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
             <h3 class="tarjetas-conocimientos__titulo">angular</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-node tarjetas-conocimientos__icono"></i>
+            <i
+              class="fa-brands fa-node tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
             <h3 class="tarjetas-conocimientos__titulo">node</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-python tarjetas-conocimientos__icono"></i>
+            <i
+              class="fa-brands fa-python tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
             <h3 class="tarjetas-conocimientos__titulo">python</h3>
           </article>
           <article class="tarjetas-conocimientos__tarjeta">
-            <i class="fa-brands fa-markdown tarjetas-conocimientos__icono"></i>
+            <i
+              class="fa-brands fa-markdown tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
             <h3 class="tarjetas-conocimientos__titulo">markdown</h3>
           </article>
         </div>
       </section>
-      <section class="principal__section principal__section--frase">
-        <cite class="frase__cita">
-          "Cuanto más estudio, más insaciable siento que es mi genio para ello."
-        </cite>
-        <span class="frase__autor">Ada Lovelace</span>
-      </section>
+
+      <aside class="principal__section principal__section--frase">
+        <figure>
+          <blockquote
+            class="frase__cita"
+            cite="https://wearetechwomen.com/inspirational-quotes-ada-lovelace-the-first-computer-programmer/"
+          >
+            "Cuanto más estudio, más insaciable siento que es mi genio para
+            ello."
+          </blockquote>
+          <figcaption class="frase__autor">— Ada Lovelace</figcaption>
+        </figure>
+      </aside>
+
       <section
         class="principal__section principal__section--proyectos"
         id="proyectos"
+        aria-labelledby="titulo-proyectos"
       >
-        <h2 class="principal__titulo">proyectos</h2>
+        <h2 class="principal__titulo" id="titulo-proyectos">proyectos</h2>
         <div class="tarjetas-proyectos">
           <article class="tarjetas-proyectos__tarjeta">
             <a
               class="tarjeta-link"
               href="https://pet-shopab.netlify.app/"
               target="_blank"
+              aria-label="Ver el proyecto Pet Shop en vivo"
             >
               <div class="tarjeta-iframe-contenedor">
                 <iframe
                   class="tarjeta-iframe"
                   src="https://pet-shopab.netlify.app/"
                   frameborder="0"
+                  title="Vista previa del proyecto Pet Shop"
                 ></iframe>
               </div>
               <div class="tarjeta-contenido">
@@ -186,106 +252,201 @@
               class="tarjeta-github"
               href="https://github.com/Antonela89/FrontEnd_Ada/tree/main/modulo_2/pet-shop/5-versionPropia-responsive"
               target="_blank"
+              aria-label="Ver el código de Pet Shop en GitHub"
             >
-              <i class="fa-brands fa-github tarjeta__icono"></i>
+              <i
+                class="fa-brands fa-github tarjeta__icono"
+                aria-hidden="true"
+              ></i>
             </a>
           </article>
           <article class="tarjetas-proyectos__tarjeta">
             <a class="tarjeta-link" href="" target="_blank">
               <div class="tarjeta-iframe-contenedor">
-                <iframe class="tarjeta-iframe" src="" frameborder="0"></iframe>
+                <iframe
+                  class="tarjeta-iframe"
+                  src=""
+                  frameborder="0"
+                  title="Vista previa de"
+                ></iframe>
               </div>
               <div class="tarjeta-contenido">
                 <h3>proyecto 2</h3>
                 <p>descripcion</p>
               </div>
             </a>
-            <a class="tarjeta-github" href="" target="_blank">
-              <i class="fa-brands fa-github tarjeta__icono"></i>
+            <a
+              class="tarjeta-github"
+              href=""
+              target="_blank"
+              aria-label="Ver el código de Pet Shop en GitHub"
+            >
+              <i
+                class="fa-brands fa-github tarjeta__icono"
+                aria-hidden="true"
+              ></i>
             </a>
           </article>
           <article class="tarjetas-proyectos__tarjeta">
             <a class="tarjeta-link" href="" target="_blank">
               <div class="tarjeta-iframe-contenedor">
-                <iframe class="tarjeta-iframe" src="" frameborder="0"></iframe>
+                <iframe
+                  class="tarjeta-iframe"
+                  src=""
+                  frameborder="0"
+                  title="Vista previa de"
+                ></iframe>
               </div>
               <div class="tarjeta-contenido">
                 <h3>proyecto 3</h3>
                 <p>descripcion</p>
               </div>
             </a>
-            <a class="tarjeta-github" href="" target="_blank">
-              <i class="fa-brands fa-github tarjeta__icono"></i>
+            <a
+              class="tarjeta-github"
+              href=""
+              target="_blank"
+              aria-label="Ver el código de Pet Shop en GitHub"
+            >
+              <i
+                class="fa-brands fa-github tarjeta__icono"
+                aria-hidden="true"
+              ></i>
             </a>
           </article>
           <article class="tarjetas-proyectos__tarjeta">
             <a class="tarjeta-link" href="" target="_blank">
               <div class="tarjeta-iframe-contenedor">
-                <iframe class="tarjeta-iframe" src="" frameborder="0"></iframe>
+                <iframe
+                  class="tarjeta-iframe"
+                  src=""
+                  frameborder="0"
+                  title="Vista previa de"
+                ></iframe>
               </div>
               <div class="tarjeta-contenido">
                 <h3>proyecto 4</h3>
                 <p>descripcion</p>
               </div>
             </a>
-            <a class="tarjeta-github" href="" target="_blank">
-              <i class="fa-brands fa-github tarjeta__icono"></i>
+            <a
+              class="tarjeta-github"
+              href=""
+              target="_blank"
+              aria-label="Ver el código de Pet Shop en GitHub"
+            >
+              <i
+                class="fa-brands fa-github tarjeta__icono"
+                aria-hidden="true"
+              ></i>
             </a>
           </article>
           <article class="tarjetas-proyectos__tarjeta">
             <a class="tarjeta-link" href="" target="_blank">
               <div class="tarjeta-iframe-contenedor">
-                <iframe class="tarjeta-iframe" src="" frameborder="0"></iframe>
+                <iframe
+                  class="tarjeta-iframe"
+                  src=""
+                  frameborder="0"
+                  title="Vista previa de"
+                ></iframe>
               </div>
               <div class="tarjeta-contenido">
                 <h3>proyecto 5</h3>
                 <p>descripcion</p>
               </div>
             </a>
-            <a class="tarjeta-github" href="" target="_blank">
-              <i class="fa-brands fa-github tarjeta__icono"></i>
+            <a
+              class="tarjeta-github"
+              href=""
+              target="_blank"
+              aria-label="Ver el código de Pet Shop en GitHub"
+            >
+              <i
+                class="fa-brands fa-github tarjeta__icono"
+                aria-hidden="true"
+              ></i>
             </a>
           </article>
           <article class="tarjetas-proyectos__tarjeta">
             <a class="tarjeta-link" href="" target="_blank">
               <div class="tarjeta-iframe-contenedor">
-                <iframe class="tarjeta-iframe" src="" frameborder="0"></iframe>
+                <iframe
+                  class="tarjeta-iframe"
+                  src=""
+                  frameborder="0"
+                  title="Vista previa de"
+                ></iframe>
               </div>
               <div class="tarjeta-contenido">
                 <h3>proyecto 6</h3>
                 <p>descripcion</p>
               </div>
             </a>
-            <a class="tarjeta-github" href="" target="_blank">
-              <i class="fa-brands fa-github tarjeta__icono"></i>
+            <a
+              class="tarjeta-github"
+              href=""
+              target="_blank"
+              aria-label="Ver el código de Pet Shop en GitHub"
+            >
+              <i
+                class="fa-brands fa-github tarjeta__icono"
+                aria-hidden="true"
+              ></i>
             </a>
           </article>
           <article class="tarjetas-proyectos__tarjeta">
             <a class="tarjeta-link" href="" target="_blank">
               <div class="tarjeta-iframe-contenedor">
-                <iframe class="tarjeta-iframe" src="" frameborder="0"></iframe>
+                <iframe
+                  class="tarjeta-iframe"
+                  src=""
+                  frameborder="0"
+                  title="Vista previa de"
+                ></iframe>
               </div>
               <div class="tarjeta-contenido">
                 <h3>proyecto 7</h3>
                 <p>descripcion</p>
               </div>
             </a>
-            <a class="tarjeta-github" href="" target="_blank">
-              <i class="fa-brands fa-github tarjeta__icono"></i>
+            <a
+              class="tarjeta-github"
+              href=""
+              target="_blank"
+              aria-label="Ver el código de Pet Shop en GitHub"
+            >
+              <i
+                class="fa-brands fa-github tarjeta__icono"
+                aria-hidden="true"
+              ></i>
             </a>
           </article>
           <article class="tarjetas-proyectos__tarjeta">
             <a class="tarjeta-link" href="" target="_blank">
               <div class="tarjeta-iframe-contenedor">
-                <iframe class="tarjeta-iframe" src="" frameborder="0"></iframe>
+                <iframe
+                  class="tarjeta-iframe"
+                  src=""
+                  frameborder="0"
+                  title="Vista previa de"
+                ></iframe>
               </div>
               <div class="tarjeta-contenido">
                 <h3>proyecto 8</h3>
                 <p>descripcion</p>
               </div>
             </a>
-            <a class="tarjeta-github" href="" target="_blank">
-              <i class="fa-brands fa-github tarjeta__icono"></i>
+            <a
+              class="tarjeta-github"
+              href=""
+              target="_blank"
+              aria-label="Ver el código en GitHub"
+            >
+              <i
+                class="fa-brands fa-github tarjeta__icono"
+                aria-hidden="true"
+              ></i>
             </a>
           </article>
         </div>
@@ -293,65 +454,75 @@
       <section
         class="principal__section principal__section--contacto"
         id="contacto"
+        aria-labelledby="titulo-contacto"
       >
-        <h2 class="principal__titulo">contacto</h2>
+        <h2 class="principal__titulo" id="titulo-contacto">contacto</h2>
         <form action="" class="formulario">
           <div class="formulario__fila">
-            <p class="formulario__campo">
+            <div class="formulario__campo">
               <label class="campo__label" for="nombre">nombre:</label>
+              <!-- El id debe coincidir con el 'for' del label -->
               <input
                 class="campo__input"
                 type="text"
+                id="nombre"
                 name="nombre"
-                name="nombre"
+                required
+                aria-required="true"
               />
-            </p>
-            <p class="formulario__campo">
+            </div>
+            <div class="formulario__campo">
               <label class="campo__label" for="apellido">apellido:</label>
               <input
                 class="campo__input"
                 type="text"
+                id="apellido"
                 name="apellido"
-                name="apellido"
+                required
+                aria-required="true"
               />
-            </p>
+            </div>
           </div>
-          <p class="formulario__campo">
+          <div class="formulario__campo">
             <label class="campo__label" for="email">e-mail:</label>
             <input
               class="campo__input"
               type="email"
+              id="email"
               name="email"
-              name="email"
+              required
+              aria-required="true"
             />
-          </p>
-          <p class="formulario__campo">
+          </div>
+          <div class="formulario__campo">
             <label class="campo__label" for="mensaje">mensaje:</label>
             <textarea
               class="campo__input campo__input--textarea"
               name="mensaje"
               id="mensaje"
+              required
+              aria-required="true"
             ></textarea>
-          </p>
+          </div>
+          <div class="formulario__botones">
+            <button
+              class="formulario__boton formulario__boton--cancelar"
+              type="reset"
+            >
+              cancelar
+            </button>
+            <button
+              class="formulario__boton formulario__boton--enviar"
+              type="submit"
+            >
+              enviar
+            </button>
+          </div>
         </form>
-        <div class="formulario__botones">
-          <button
-            class="formulario__boton formulario__boton--cancelar"
-            type="reset"
-          >
-            cancelar
-          </button>
-          <button
-            class="formulario__boton formulario__boton--enviar"
-            type="submit"
-          >
-            enviar
-          </button>
-        </div>
       </section>
     </main>
-    <footer class="pie">
-      <nav class="pie__nav">
+    <footer class="pie" role="contentinfo">
+      <nav class="pie__nav" aria-label="Navegación secundaria">
         <ul class="pie__lista">
           <li class="pie__item">
             <a class="pie__link" href="#sobre">sobre mi</a>
@@ -367,36 +538,36 @@
           </li>
         </ul>
       </nav>
-      <nav class="pie__nav--redes">
+      <nav class="pie__nav--redes" aria-label="Redes sociales">
         <ul class="pie__lista--redes">
           <li class="pie__item--redes">
-            <a class="pie__link--redes" href=""
-              ><i class="fa-brands fa-github pie__icono--redes"></i
+            <a class="pie__link--redes" href="#" aria-label="Visita mi perfil de GitHub"
+              ><i class="fa-brands fa-github pie__icono--redes" aria-hidden="true"></i
             ></a>
           </li>
           <li class="pie__item--redes">
-            <a class="pie__link--redes" href=""
-              ><i class="fa-brands fa-facebook pie__icono--redes"></i
+            <a class="pie__link--redes" href="#" aria-label="Visita mi perfil de Facebook"
+              ><i class="fa-brands fa-facebook pie__icono--redes" aria-hidden="true"></i
             ></a>
           </li>
           <li class="pie__item--redes">
-            <a class="pie__link--redes" href=""
-              ><i class="fa-brands fa-linkedin pie__icono--redes"></i
+            <a class="pie__link--redes" href="#" aria-label="Visita mi perfil de LinkedIn"
+              ><i class="fa-brands fa-linkedin pie__icono--redes" aria-hidden="true"></i
             ></a>
           </li>
           <li class="pie__item--redes">
-            <a class="pie__link--redes" href=""
-              ><i class="fa-brands fa-discord pie__icono--redes"></i
+            <a class="pie__link--redes" href="#" aria-label="Visita mi perfil de Discord"
+              ><i class="fa-brands fa-discord pie__icono--redes" aria-hidden="true"></i
             ></a>
           </li>
           <li class="pie__item--redes">
-            <a class="pie__link--redes" href=""
-              ><i class="fa-brands fa-google pie__icono--redes"></i
+            <a class="pie__link--redes" href="" aria-label="Envía un emai"
+              ><i class="fa-brands fa-google pie__icono--redes" aria-hidden="true"></i
             ></a>
           </li>
         </ul>
       </nav>
-      <p class="pie__parrafo">ADA ITW - Portfolio</p>
+      <p class="pie__parrafo">&copy; 2025 Antonela Borgogono - ADA ITW - Portfolio</p>
     </footer>
   </body>
 </html>
