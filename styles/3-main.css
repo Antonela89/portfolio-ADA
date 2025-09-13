@@ -1,0 +1,30 @@
+/* first mobile */
+.principal {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.principal__section {
+    width: 100%;
+    padding: 1rem 0;
+    /* border: 1px solid var(--accent-color); */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.principal__titulo {
+    text-transform: uppercase;
+    font-family: var(--poppins);
+    background-color: var(--secondary-accent-color);
+    color: var(--background-color);
+    text-align: center;
+}
+
+/* responsive */
+/* tablet */
+@media (min-width: 768px) {}
+
+/* desktop */
+@media (min-width: 1024px) {}
