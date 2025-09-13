@@ -4,7 +4,7 @@
   --primary-text-color: #e0e0e0; /* Blanco grisáceo para no cansar la vista */
   --secondary-text-color: #a0a0a0; /* Gris medio para detalles */
   --accent-color: #bb86fc; /* Púrpura neón como color de acento */
-  --card-background-color: #1e1e1e; /* Un gris muy oscuro para las tarjetas */
+  --accent-color-transparencia: rgba(187, 134,252, 0.5);  /* Púrpura neón con transparencia*/
   --secondary-accent-color: #03dac6; /* Turquesa para un segundo acento */
 
   /* tipografias */
@@ -24,4 +24,5 @@ body {
   min-height: 100vh;
   background-color: var(--background-color);
   color: var(--primary-text-color);
+  font-family: var(--roboto);
 }
