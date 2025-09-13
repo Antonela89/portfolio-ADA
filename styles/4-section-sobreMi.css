@@ -47,6 +47,7 @@
     text-transform: uppercase;
     font-weight: bold;
     transition: all 0.3s ease;
+    margin-block-end: 1rem;
 }
 
 .sobre__enlace:hover {
