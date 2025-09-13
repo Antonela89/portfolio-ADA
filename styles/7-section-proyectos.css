@@ -29,12 +29,11 @@
   flex: 0 0 80%;
   max-width: 25rem;
   margin: 0 1rem;
-  scroll-snap-align: center;
   /* Centra la tarjeta al hacer "snap" */
+  scroll-snap-align: center;
   background-color: var(--accent-color-transparencia);
   border-radius: 0.25rem;
-  box-shadow: 0 5px 15px var(--primary-text-color);
-  /* box-shadow: 0 5px 15px var(--secondary-accent-color); */
+  box-shadow: 0 5px 15px var(--secondary-accent-color);
   padding: 0.25rem;
   overflow: hidden;
   transition: transform 0.3s ease;
