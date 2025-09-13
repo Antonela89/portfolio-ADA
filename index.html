@@ -457,19 +457,23 @@
         aria-labelledby="titulo-contacto"
       >
         <h2 class="principal__titulo" id="titulo-contacto">contacto</h2>
-        <form action="" class="formulario">
+        <form action="" class="formulario" novalidate>
           <div class="formulario__fila">
             <div class="formulario__campo">
               <label class="campo__label" for="nombre">nombre:</label>
-              <!-- El id debe coincidir con el 'for' del label -->
               <input
                 class="campo__input"
                 type="text"
                 id="nombre"
                 name="nombre"
                 required
+                minlength="2"
+                placeholder=" María"
                 aria-required="true"
               />
+              <span class="campo__error-mensaje"
+                >El nombre debe tener al menos 2 caracteres.</span
+              >
             </div>
             <div class="formulario__campo">
               <label class="campo__label" for="apellido">apellido:</label>
@@ -479,8 +483,13 @@
                 id="apellido"
                 name="apellido"
                 required
+                minlength="2"
+                placeholder="Gomez"
                 aria-required="true"
               />
+              <span class="campo__error-mensaje"
+                >El apellido debe tener al menos 2 caracteres.</span
+              >
             </div>
           </div>
           <div class="formulario__campo">
@@ -491,8 +500,12 @@
               id="email"
               name="email"
               required
+              placeholder="mariagomez@correo.com"
               aria-required="true"
             />
+            <span class="campo__error-mensaje"
+              >Por favor, introduce un e-mail válido.</span
+            >
           </div>
           <div class="formulario__campo">
             <label class="campo__label" for="mensaje">mensaje:</label>
@@ -501,8 +514,13 @@
               name="mensaje"
               id="mensaje"
               required
+              minlength="10"
+              placeholder="Ingresa tu mensaje"
               aria-required="true"
             ></textarea>
+            <span class="campo__error-mensaje"
+              >El mensaje debe tener al menos 10 caracteres.</span
+            >
           </div>
           <div class="formulario__botones">
             <button
@@ -542,34 +560,63 @@
         <nav class="pie__nav--redes" aria-label="Redes sociales">
           <ul class="pie__lista--redes">
             <li class="pie__item--redes">
-              <a class="pie__link--redes" href="#" aria-label="Visita mi perfil de GitHub"
-                ><i class="fa-brands fa-github pie__icono--redes" aria-hidden="true"></i
+              <a
+                class="pie__link--redes"
+                href="#"
+                aria-label="Visita mi perfil de GitHub"
+                ><i
+                  class="fa-brands fa-github pie__icono--redes"
+                  aria-hidden="true"
+                ></i
               ></a>
             </li>
             <li class="pie__item--redes">
-              <a class="pie__link--redes" href="#" aria-label="Visita mi perfil de Facebook"
-                ><i class="fa-brands fa-facebook pie__icono--redes" aria-hidden="true"></i
+              <a
+                class="pie__link--redes"
+                href="#"
+                aria-label="Visita mi perfil de Facebook"
+                ><i
+                  class="fa-brands fa-facebook pie__icono--redes"
+                  aria-hidden="true"
+                ></i
               ></a>
             </li>
             <li class="pie__item--redes">
-              <a class="pie__link--redes" href="#" aria-label="Visita mi perfil de LinkedIn"
-                ><i class="fa-brands fa-linkedin pie__icono--redes" aria-hidden="true"></i
+              <a
+                class="pie__link--redes"
+                href="#"
+                aria-label="Visita mi perfil de LinkedIn"
+                ><i
+                  class="fa-brands fa-linkedin pie__icono--redes"
+                  aria-hidden="true"
+                ></i
               ></a>
             </li>
             <li class="pie__item--redes">
-              <a class="pie__link--redes" href="#" aria-label="Visita mi perfil de Discord"
-                ><i class="fa-brands fa-discord pie__icono--redes" aria-hidden="true"></i
+              <a
+                class="pie__link--redes"
+                href="#"
+                aria-label="Visita mi perfil de Discord"
+                ><i
+                  class="fa-brands fa-discord pie__icono--redes"
+                  aria-hidden="true"
+                ></i
               ></a>
             </li>
             <li class="pie__item--redes">
               <a class="pie__link--redes" href="" aria-label="Envía un emai"
-                ><i class="fa-brands fa-google pie__icono--redes" aria-hidden="true"></i
+                ><i
+                  class="fa-brands fa-google pie__icono--redes"
+                  aria-hidden="true"
+                ></i
               ></a>
             </li>
           </ul>
         </nav>
       </div>
-      <p class="pie__parrafo">&copy; 2025 Antonela Borgogono - ADA ITW - Portfolio</p>
+      <p class="pie__parrafo">
+        &copy; 2025 Antonela Borgogono - ADA ITW - Portfolio
+      </p>
     </footer>
   </body>
 </html>

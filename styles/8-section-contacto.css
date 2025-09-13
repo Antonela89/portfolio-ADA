@@ -28,6 +28,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    position: relative;
 }
 
 .campo__label {
@@ -43,11 +44,36 @@
     border: none;
     padding: 0.5rem 1rem;
     font-family: inherit;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease, outline-color 0.3s ease;
+}
+
+/* validacion */
+.campo__input:valid:not(:placeholder-shown) {
+    border-color: var(--secondary-accent-color);
+}
+
+.campo__input:invalid:not(:placeholder-shown) {
+    border-color: #ff6b6b;
+    outline-color: #ff6b6b;
 }
 
 .campo__input:focus-visible {
     border: none;
     outline: 2px solid var(--accent-color);
+}
+
+/* mensajes de error */
+.campo__error-mensaje {
+    display: none;
+    color: #ff6b6b;
+    font-size: 0.8rem;
+    padding-inline-start: 1rem;
+}
+
+/* Muestra el mensaje de error cuando el campo adyacente es inválido y el usuario ha interactuado */
+.campo__input:invalid:not(:placeholder-shown)+.campo__error-mensaje {
+    display: block;
 }
 
 .formulario__botones {
