@@ -7,6 +7,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.5rem;
+    perspective: 1000px
 }
 
 .tarjetas-conocimientos__tarjeta {
@@ -20,16 +21,34 @@
     background-color: var(--background-color);
     border-radius: 0.5rem;
     padding: 1rem;
+    transition: all 0.3s ease-in-out;
 }
 
-.tarjetas-conocimientos__tarjeta:hover {
+/* .tarjetas-conocimientos__tarjeta:hover {
     outline: 3px solid var(--secondary-accent-color);
     color: var(--accent-color);
     transform: scale(1.1);
+} */
+
+.tarjetas-conocimientos__tarjeta:hover {
+    /* Brillo de múltiples capas con box-shadow */
+    box-shadow: 0 0 5px var(--secondary-accent-color),
+        0 0 10px var(--secondary-accent-color),
+        0 0 20px rgba(3, 218, 198, 0.5);
+    transform: translateY(-5px);
+    transform: rotateY(-10deg) scale(1.05);
+    outline: 2px solid var(--secondary-accent-color);
+    color: var(--accent-color);
+}
+
+.tarjetas-conocimientos__tarjeta:hover .tarjetas-conocimientos__icono {
+    text-shadow: 0 0 8px var(--secondary-accent-color);
+    -webkit-text-stroke: 1px var(--background-color);
 }
 
 .tarjetas-conocimientos__icono {
     font-size: 3rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .tarjetas-conocimientos__titulo {
