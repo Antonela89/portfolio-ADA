@@ -8,7 +8,7 @@
     flex-wrap: wrap;
     gap: 0.5rem;
     padding: 0 1rem;
-    perspective: 1000px
+    perspective: 62.5rem;
 }
 
 .tarjetas-conocimientos__tarjeta {
