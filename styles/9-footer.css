@@ -44,6 +44,8 @@
     border-radius: 1rem;
     background-color: var(--accent-color);
     outline: 2px solid var(--background-color);
+    text-shadow: 0 0 8px var(--accent-color);
+    transition: all 0.2s ease-in;
 }
 
 .pie__link--redes {
