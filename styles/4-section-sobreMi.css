@@ -15,12 +15,20 @@
 
 .sobre-contenedor-imagen {
     flex: 0 0 50%;
+    position: relative;
 }
 
 .sobre__imagen {
     width: 100%;
-
     object-fit: cover;
+}
+
+.sobre__imagen-caption {
+    font-size: 0.75rem;
+    color: var(--secondary-text-color);
+    text-align: center;
+    margin-top: 0.5rem;
+    font-style: italic;
 }
 
 .sobre__descripcion {
@@ -48,6 +56,7 @@
     font-weight: bold;
     transition: all 0.3s ease;
     margin-block-end: 1rem;
+    z-index: 2;
 }
 
 .sobre__enlace:hover {
@@ -60,6 +69,12 @@
 @media (min-width: 768px) {
     .sobre {
         flex-direction: row;
+    }
+
+    .sobre__imagen-caption {
+        position: absolute;
+        bottom: 6rem;
+        right: 1rem;
     }
 
     .descripcion__tablet {
@@ -79,6 +94,7 @@
         background-color: var(--accent-color);
         position: absolute;
         left: 0;
+        z-index: 1;
     }
 
     .sobre::before {

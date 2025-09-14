@@ -78,13 +78,20 @@
       >
         <h2 class="principal__titulo" id="titulo-sobre-mi">sobre mi</h2>
         <div class="sobre">
-          <picture class="sobre-contenedor-imagen">
-            <img
-              class="sobre__imagen"
-              src="/images/banner/banner.png"
-              alt="Fotografía de perfil de Antonela Borgogono"
-            />
-          </picture>
+          <figure class="sobre-contenedor-imagen">
+            <picture>
+              <source srcset="/images/banner/perfil.webp" type="image/webp" />
+              <source srcset="/images/banner/perfil.jpg" type="image/jpeg" />
+              <img
+                class="sobre__imagen"
+                src="/images/banner/perfil.jpg"
+                alt="Retrato artístico de una mujer con cabello oscuro. Imagen generada por IA."
+              />
+            </picture>
+            <figcaption class="sobre__imagen-caption">
+              Imagen generada con IA - Nano Banana
+            </figcaption>
+          </figure>
           <div class="sobre__descripcion">
             <p class="descripcion__tablet">
               Desarrolladora web versátil con experiencia formativa en
