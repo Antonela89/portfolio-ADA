@@ -9,19 +9,43 @@
   width: 100%;
   height: auto;
   display: flex;
-  overflow-x: auto;
   /* Permite el scroll horizontal */
-  scroll-snap-type: x mandatory;
+  overflow-x: auto;
   /* Activa el "snap" en el eje X */
-  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
   /* Scroll suave en dispositivos móviles */
+  -webkit-overflow-scrolling: touch;
   padding: 1.5rem 0;
 }
 
-/* Ocultar la barra de scroll estándar */
-.tarjetas-proyectos::-webkit-scrollbar {
-  display: none;
+/* --- ESTILOS PARA SCROLLBAR --- */
+/* Para Firefox */
+.tarjetas-proyectos {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) var(--background-color);
 }
+
+/* Para WebKit (Chrome, Safari, Edge, Opera) */
+.tarjetas-proyectos::-webkit-scrollbar {
+  height: 1rem;
+}
+
+.tarjetas-proyectos::-webkit-scrollbar-track {
+  background-color: var(--background-color);
+  border-radius: 0.75rem;
+  margin-inline: 1rem;
+}
+
+.tarjetas-proyectos::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 0.75rem;
+  border: 2px solid var(--background-color);
+}
+
+.tarjetas-proyectos::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-accent-color);
+}
+
 
 /* Tarjeta individual del proyecto */
 .tarjetas-proyectos__tarjeta {
@@ -33,15 +57,15 @@
   scroll-snap-align: center;
   background-color: var(--accent-color-transparencia);
   border-radius: 0.25rem;
-  box-shadow: 0 5px 15px var(--secondary-accent-color);
   padding: 0.25rem;
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
   position: relative;
 }
 
 .tarjetas-proyectos__tarjeta:hover {
-  transform: translateY(-10px);
+  transform: translateY(-0.75rem);
+  box-shadow: 0 5px 15px var(--secondary-accent-color);
 }
 
 .tarjeta-link {
