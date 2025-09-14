@@ -3,7 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Antonela Borgogono</title>
+    <title>Portfolio - Antonela Borgogono | Desarrolladora Web</title>
+
+    <!-- METADATOS PARA SEO (Optimización para Motores de Búsqueda) -->
+    <meta
+      name="description"
+      content="Portafolio de Antonela Borgogono, desarrolladora web especializada en Front-End con React, Back-End y IA. Explora mis proyectos y habilidades."
+    />
+    <meta
+      name="keywords"
+      content="Antonela Borgogono, portfolio, desarrolladora web, front-end, react, back-end, javascript, argentina"
+    />
+    <meta name="author" content="Antonela Borgogono" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- METADATOS PARA REDES SOCIALES (Open Graph & Twitter Cards) -->
+    <!-- Open Graph (para Facebook, LinkedIn, WhatsApp, etc.) -->
+    <meta
+      property="og:title"
+      content="Portfolio - Antonela Borgogono | Desarrolladora Web"
+    />
+    <meta
+      property="og:description"
+      content="Explora los proyectos y habilidades de Antonela Borgogono, desarrolladora web."
+    />
+    <meta
+      property="og:image"
+      content="https://[URL-DE-TU-SITIO]/images/banner/perfil.jpg"
+    />
+    <!-- ¡IMPORTANTE! Reemplazar la URL cuando se hace deploy -->
+    <meta property="og:url" content="https://[URL-DE-TU-SITIO]/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Cards (para Twitter) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Portfolio - Antonela Borgogono | Desarrolladora Web"
+    />
+    <meta
+      name="twitter:description"
+      content="Explora los proyectos y habilidades de Antonela Borgogono, desarrolladora web."
+    />
+    <meta
+      name="twitter:image"
+      content="https://[URL-DE-TU-SITIO]/images/banner/perfil.jpg"
+    />
+    <!-- ¡IMPORTANTE! Reemplazar la URL cuando se hace deploy -->
+
+    <!-- OTROS METADATOS -->
+    <!-- Color de la barra de URL en móviles (--accent-color) -->
+    <meta name="theme-color" content="#bb86fc" />
+
     <!-- link css -->
     <link rel="stylesheet" href="/styles/styles.css" />
     <!-- link fuentes -->
@@ -39,6 +90,8 @@
     />
   </head>
   <body>
+    <!-- ======================= HEADER / NAVEGACIÓN ======================= -->
+
     <header class="encabezado" role="banner">
       <h1 class="encabezado__titulo">Antonela Borgogno</h1>
       <nav
@@ -70,7 +123,12 @@
         </ul>
       </nav>
     </header>
+
+    <!-- ===================== CONTENIDO PRINCIPAL (MAIN) ================== -->
+
     <main class="principal" role="main">
+      <!-- ========== Seccción: Sobre Mí ========== -->
+
       <section
         class="principal__section principal__section--sobre"
         id="sobre"
@@ -112,6 +170,11 @@
         </div>
         <a class="sobre__enlace" href="#proyectos">Mira mis proyectos...</a>
       </section>
+
+      <!-- ========== Fin de Seccción: Sobre Mí ========== -->
+
+      <!-- ========== Seccción: Conocimientos ========== -->
+
       <section
         class="principal__section principal__section--conocimientos"
         id="conocimientos"
@@ -215,6 +278,10 @@
         </div>
       </section>
 
+      <!-- ========== Fin de Seccción: Conocimientos ========== -->
+
+      <!-- ========== Aside: Frase Inspiradora ========== -->
+
       <aside class="principal__section principal__section--frase">
         <figure>
           <blockquote
@@ -227,6 +294,10 @@
           <figcaption class="frase__autor">— Ada Lovelace</figcaption>
         </figure>
       </aside>
+
+      <!-- ========== Fin de Aside: Frase Inspiradora ========== -->
+
+      <!-- ========== Seccción: Proyectos ========== -->
 
       <section
         class="principal__section principal__section--proyectos"
@@ -268,7 +339,11 @@
             </a>
           </article>
           <article class="tarjetas-proyectos__tarjeta">
-            <a class="tarjeta-link" href="https://bank-react-styled-components-j2qw.vercel.app/" target="_blank">
+            <a
+              class="tarjeta-link"
+              href="https://bank-react-styled-components-j2qw.vercel.app/"
+              target="_blank"
+            >
               <div class="tarjeta-iframe-contenedor">
                 <iframe
                   class="tarjeta-iframe"
@@ -295,7 +370,11 @@
             </a>
           </article>
           <article class="tarjetas-proyectos__tarjeta">
-            <a class="tarjeta-link" href="https://react-one-colaboradores.vercel.app/" target="_blank">
+            <a
+              class="tarjeta-link"
+              href="https://react-one-colaboradores.vercel.app/"
+              target="_blank"
+            >
               <div class="tarjeta-iframe-contenedor">
                 <iframe
                   class="tarjeta-iframe"
@@ -322,7 +401,11 @@
             </a>
           </article>
           <article class="tarjetas-proyectos__tarjeta">
-            <a class="tarjeta-link" href="https://antonela89.github.io/humaya/" target="_blank">
+            <a
+              class="tarjeta-link"
+              href="https://antonela89.github.io/humaya/"
+              target="_blank"
+            >
               <div class="tarjeta-iframe-contenedor">
                 <iframe
                   class="tarjeta-iframe"
@@ -349,7 +432,11 @@
             </a>
           </article>
           <article class="tarjetas-proyectos__tarjeta">
-            <a class="tarjeta-link" href="https://react-06-pokeapi.vercel.app/" target="_blank">
+            <a
+              class="tarjeta-link"
+              href="https://react-06-pokeapi.vercel.app/"
+              target="_blank"
+            >
               <div class="tarjeta-iframe-contenedor">
                 <iframe
                   class="tarjeta-iframe"
@@ -376,7 +463,11 @@
             </a>
           </article>
           <article class="tarjetas-proyectos__tarjeta">
-            <a class="tarjeta-link" href="https://23644-grupo1-reac-tv.vercel.app/" target="_blank">
+            <a
+              class="tarjeta-link"
+              href="https://23644-grupo1-reac-tv.vercel.app/"
+              target="_blank"
+            >
               <div class="tarjeta-iframe-contenedor">
                 <iframe
                   class="tarjeta-iframe"
@@ -403,7 +494,11 @@
             </a>
           </article>
           <article class="tarjetas-proyectos__tarjeta">
-            <a class="tarjeta-link" href="https://antonela89.github.io/gestor_usuarios/" target="_blank">
+            <a
+              class="tarjeta-link"
+              href="https://antonela89.github.io/gestor_usuarios/"
+              target="_blank"
+            >
               <div class="tarjeta-iframe-contenedor">
                 <iframe
                   class="tarjeta-iframe"
@@ -430,7 +525,11 @@
             </a>
           </article>
           <article class="tarjetas-proyectos__tarjeta">
-            <a class="tarjeta-link" href="https://antonela89.github.io/SWEETHOME/" target="_blank">
+            <a
+              class="tarjeta-link"
+              href="https://antonela89.github.io/SWEETHOME/"
+              target="_blank"
+            >
               <div class="tarjeta-iframe-contenedor">
                 <iframe
                   class="tarjeta-iframe"
@@ -458,6 +557,11 @@
           </article>
         </div>
       </section>
+
+      <!-- ========== Fin de Seccción: Proyectos ========== -->
+
+      <!-- ========== Seccción: Contacto ========== -->
+
       <section
         class="principal__section principal__section--contacto"
         id="contacto"
@@ -545,7 +649,13 @@
           </div>
         </form>
       </section>
+
+      <!-- ========== Fin de Seccción: Contacto ========== -->
     </main>
+
+    <!-- =================== FIN DE CONTENIDO PRINCIPAL ==================== -->
+
+    <!-- ======================= FOOTER / PIE DE PÁGINA ==================== -->
     <footer class="pie" role="contentinfo">
       <div class="pie__contenido-principal">
         <nav class="pie__nav" aria-label="Navegación secundaria">
