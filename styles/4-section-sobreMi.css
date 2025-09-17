@@ -1,8 +1,11 @@
-/* mobile first */
+/* ========== Estilos base para el encabezado (Enfoque Mobile First) ========== */
+
+/* Modificador para la sección principal que contiene la parte "Sobre mí".*/
 .principal__section--sobre {
     align-items: center;
 }
 
+/* Contenedor principal de la sección "Sobre mí". */
 .sobre {
     display: flex;
     padding: 1rem;
@@ -10,42 +13,51 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    position: relative;
+    position: relative; /* Clave para posicionar los pseudoelementos decorativos en tablets. */
 }
 
+/* Contenedor de la imagen. */
 .sobre-contenedor-imagen {
+    /* flex: flex-grow | flex-shrink | flex-basis. No crece, no se encoge,
+       su tamaño base será del 50% cuando el layout sea horizontal. */
     flex: 0 0 50%;
-    position: relative;
+    position: relative; /* Para posicionar el caption de la imagen en tablet. */
 }
 
+/* Imagen */
 .sobre__imagen {
-    width: 100%;
-    object-fit: cover;
+    inline-size: 100%;
+    object-fit: cover; /* Evita que la imagen se deforme, recortándola si es necesario. */
 }
 
+/* Pie de foto o descripción de la imagen. */
 .sobre__imagen-caption {
     font-size: 0.75rem;
     color: var(--secondary-text-color);
     text-align: center;
-    margin-top: 0.5rem;
+    margin-block-start: 0.5rem; /* Margen superior. */
     font-style: italic;
 }
 
+/* Contenedor para el texto descriptivo. */
 .sobre__descripcion {
-    flex: 0 0 50%;
+    flex: 0 0 50%; /* Ocupará el otro 50% en el layout horizontal. */
     font-family: var(--poppins);
 }
 
+/* Párrafo de descripción específico para tablets/desktop. Oculto en móvil. */
 .descripcion__tablet {
     display: none;
 }
 
+/* Párrafo de descripción específico para móviles. Centrado. */
 .descripcion__mobile {
     text-align: center;
 }
 
+/* Enlace/botón de llamada a la acción */
 .sobre__enlace {
-    max-width: 80%;
+    max-inline-size: 80%;
     flex: 1 1 80%;
     padding: 1rem;
     border-radius: 1rem;
@@ -53,36 +65,41 @@
     color: var(--background-color);
     text-decoration: none;
     text-transform: uppercase;
+    text-align: center; /* Asegura que el texto dentro del enlace esté centrado. */
     font-weight: bold;
-    transition: all 0.3s ease;
-    margin-block-end: 1rem;
-    z-index: 2;
+    margin-block-end: 1rem; /* Margen inferior. */
+    z-index: 2;  /* Se asegura de que el enlace esté por encima de las barras decorativas en tablet. */
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.sobre__enlace:hover {
+.sobre__enlace:hover,
+.sobre__enlace:active {
     transform: scale(1.1);
     background-color: var(--secondary-accent-color)
 }
 
-/* responsive */
-/* tablet */
+/* ========== Estilos Responsivos (Tablet y superiores) ========== */
+/* ========== Tablet ========== */
 @media (min-width: 768px) {
     .principal__section--sobre {
         display: flex;
     }
 
+    /* El layout de la sección "Sobre mí" se vuelve horizontal. */
     .sobre {
         flex-direction: row;
     }
 
+      /* El pie de foto se posiciona de forma absoluta sobre la imagen. */
     .sobre__imagen-caption {
         position: absolute;
-        bottom: 6rem;
-        right: 1rem;
+        inset-block-end: 6rem;
+        inset-inline-end: 1rem;
     }
 
+     /* Se muestra la descripción para tablet y se oculta la de móvil. */
     .descripcion__tablet {
-        display: flex;
+        display: block;
         font-size: 1rem;
     }
 
@@ -90,59 +107,73 @@
         display: none;
     }
 
+    /*
+     * Se añaden dos barras decorativas, una arriba y otra abajo,
+     * usando pseudoelementos.
+    */
     .sobre::before,
     .sobre::after {
         content: '';
-        width: 100%;
-        height: 4rem;
+        inline-size: 100%;
+        block-size: 4rem; /*Alturas de las barras */
         background-color: var(--accent-color);
         position: absolute;
-        left: 0;
-        z-index: 1;
+        inset-inline-start: 0;
+        z-index: 1; /* Se posicionan debajo del enlace (que tiene z-index: 2). */
     }
 
+    /* Posiciona la primera barra en la parte superior. */
     .sobre::before {
-        top: 0;
+        inset-block-start: 0;
     }
 
+    /* Posiciona la segunda barra en la parte inferior. */
     .sobre::after {
-        bottom: 0;
+        inset-block-end: 0;
     }
 
+    /*
+     * Se reubica el enlace para que se superponga sobre la barra inferior,
+     * creando un efecto visual de profundidad.
+    */
     .sobre__enlace {
-        max-width: 45%;
+        max-inline-size: 45%;
         flex-basis: 45%;
         padding: 0.75rem;
-        position: relative;
-        bottom: 1.80rem;
-        margin-top: -2.50rem;
-        margin-block-end: 0;
+        position: absolute; /* Se posiciona relativo al contenedor '.sobre'. */
+        inset-block-end: 1.80rem; /* Distancia desde la parte inferior. */
+        margin-block-end: -1rem; /* Se resetea el margen inferior de la vista móvil. */
     }
 }
 
-/* desktop */
+/* ========== Desktop ========== */
 @media (min-width: 1024px) {
+    /* Limita la altura de la sección en pantallas grandes. */
     .principal__section--sobre {
-        max-height: 47rem;
+        max-block-size: 47rem;
     }
 
+     /* Las barras decorativas se hacen más altas. */
     .sobre::before,
     .sobre::after {
-        height: 6rem;
+        block-size: 6rem;
     }
 
+    /* Se establece una altura fija para la imagen. */
     .sobre__imagen {
-        height: 40rem;
+        block-size: 40rem;
     }
 
+    /* Se aumenta el tamaño de la fuente para mejor legibilidad. */
     .descripcion__tablet {
         font-size: 1.5rem;
     }
 
+     /* Se ajusta el tamaño y la posición del enlace para la pantalla grande. */
     .sobre__enlace {
         max-width: 30%;
         flex-basis: 30%;
         font-size: 1.5rem;
-        bottom: 3rem;
+        inset-block-end: 2.25rem;
     }
 }

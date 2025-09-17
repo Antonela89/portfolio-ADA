@@ -1,46 +1,51 @@
-/* first mobile */
+/* ========== Estilos base para el encabezado (Enfoque Mobile First) ========== */
+/* Contenedor principal para la sección de la frase destacada. */
 .principal__section--frase {
     background-color: var(--accent-color);
+    /* Centra el texto de todos los elementos hijos por defecto. */
     text-align: center;
     font-family: var(--poppins);
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-    margin: 1rem 0;
+    flex-direction: column; /* Apila la cita y el autor verticalmente. */
+    gap: 1rem; /* Espacio entre la cita y el autor. */
+    padding: 1rem;  /* Espaciado interno. */
+    margin-block: 1rem;  /* Propiedad lógica para el margen superior e inferior. */
 }
 
+/* Estilo para el texto de la cita. */
 .frase__cita {
     font-weight: bold;
 }
 
+/* Estilo para el autor de la cita. */
 .frase__autor {
     font-style: italic;
 }
 
-/* responsive */
-/* tablet */
+/* ========== Estilos Responsivos (Tablet y superiores) ========== */
+/* ========== Tablet ========== */
 @media (min-width: 768px) {
+       /* En pantallas más grandes, se aumenta el tamaño de la fuente y los espaciados. */
     .principal__section--frase {
         font-size: 1.5rem;
         padding: 1.5rem;
-        margin: 1.5rem 0;
+        margin-block: 1.5rem;
     }
 
-    .frase__cita {
-        text-align: center;
-    }
-
+    /*
+     * Alínea el texto del autor al final (a la derecha en sistemas LTR).
+    */
     .frase__autor {
         text-align: end;
     }
 }
 
-/* desktop */
+/* ========== Desktop ========== */
 @media (min-width: 1024px) {
+    /* Se incrementa aún más el tamaño de la fuente y los espaciados para pantallas grandes. */
     .principal__section--frase {
         font-size: 2rem;
         padding: 2rem;
-        margin: 2rem 0;
+        margin-block: 2rem;
     }
 }
