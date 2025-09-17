@@ -22,6 +22,7 @@
     /* 
     flex-grow: 1 (puede crecer), flex-shrink: 1 (puede encogerse), flex-basis: calcula el ancho base para dos columnas con un gap de 0.5rem. 
     */
+    max-inline-size: calc(50% - 0.25rem);
     flex: 1 1 calc(50% - 0.25rem);
     display: flex;
     flex-direction: column;
@@ -86,6 +87,7 @@
         (100% - espacio_total_de_gaps) / numero_de_columnas
         (100% - (2 * 0.75rem)) / 3
        */
+        max-inline-size: calc((100% - 1.5rem) / 3);
         flex-basis: calc((100% - 1.5rem) / 3);
     }
 }
@@ -99,6 +101,7 @@
 
     .tarjetas-conocimientos__tarjeta {
         /* (100% - (4 * 1rem)) / 5 */
+        max-inline-size: calc((100% - 4rem) / 5);
         flex-basis: calc((100% - 4rem) / 5);
     }
 }
