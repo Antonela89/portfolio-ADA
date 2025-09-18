@@ -85,6 +85,7 @@
 /* Párrafo de copyright o texto final. */
 .pie__parrafo {
     font-weight: bold;
+    text-align: center;
 }
 
 /* ========== Estilos Responsivos (Tablet y superiores) ========== */
