@@ -106,49 +106,58 @@
     <!-- ======================= HEADER / NAVEGACIÓN ======================= -->
 
     <header class="encabezado" role="banner">
-      <h1 class="encabezado__titulo">Antonela Borgogno</h1>
-
-      <nav
-        class="encabezado__nav"
-        role="navigation"
-        aria-label="Navegación principal"
-      >
-        <ul class="encabezado__lista">
-          <li class="encabezado__item">
-            <a class="encabezado__link" href="#sobre">
-              <span class="link__texto">sobre mi</span>
-            </a>
-          </li>
-          <li class="encabezado__item">
-            <a class="encabezado__link" href="#conocimientos">
-              <span class="link__texto">conocimientos</span>
-            </a>
-          </li>
-          <li class="encabezado__item">
-            <a class="encabezado__link" href="#proyectos">
-              <span class="link__texto">proyectos</span>
-            </a>
-          </li>
-          <li class="encabezado__item">
-            <a class="encabezado__link" href="#contacto">
-              <span class="link__texto">contacto</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <!-- ======================= Interruptor ======================= -->
-      <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="theme-switch-checkbox">
-          <input
-            type="checkbox"
-            id="theme-switch-checkbox"
-            aria-label="Cambiar tema de color"
-          />
-          <div class="slider round"></div>
-        </label>
+      <div class="encabezado__superior">
+        <!-- Elemento Izquierda: Título con iniciales/nombre completo -->
+        <h1 class="encabezado__titulo">
+          <span class="titulo__completo">Antonela Borgogno</span>
+          <span class="titulo__iniciales" aria-hidden="true">AB</span>
+        </h1>
+        <!-- Elemento Centro: Switch de tema -->
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="theme-switch-checkbox">
+            <input
+              type="checkbox"
+              id="theme-switch-checkbox"
+              aria-label="Cambiar tema de color"
+            />
+            <div class="slider round"></div>
+          </label>
+        </div>
+        <!-- Elemento Derecha: Botón Hamburguesa -->
+        <button class="encabezado__hamburguesa" aria-label="Abrir menú">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
       </div>
-      <!-- =================================================================== -->
+
+         <!-- La navegación controlada por el botón (mobile) / visible en pantallas medias y grandes -->
+    <nav
+      class="encabezado__nav"
+      role="navigation"
+      aria-label="Navegación principal"
+    >
+      <ul class="encabezado__lista">
+        <li class="encabezado__item">
+          <a class="encabezado__link" href="#sobre">
+            <span class="link__texto">sobre mi</span>
+          </a>
+        </li>
+        <li class="encabezado__item">
+          <a class="encabezado__link" href="#conocimientos">
+            <span class="link__texto">conocimientos</span>
+          </a>
+        </li>
+        <li class="encabezado__item">
+          <a class="encabezado__link" href="#proyectos">
+            <span class="link__texto">proyectos</span>
+          </a>
+        </li>
+        <li class="encabezado__item">
+          <a class="encabezado__link" href="#contacto">
+            <span class="link__texto">contacto</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
     </header>
 
     <!-- ===================== CONTENIDO PRINCIPAL (MAIN) ================== -->
