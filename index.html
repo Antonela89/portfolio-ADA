@@ -129,35 +129,35 @@
         </button>
       </div>
 
-         <!-- La navegación controlada por el botón (mobile) / visible en pantallas medias y grandes -->
-    <nav
-      class="encabezado__nav"
-      role="navigation"
-      aria-label="Navegación principal"
-    >
-      <ul class="encabezado__lista">
-        <li class="encabezado__item">
-          <a class="encabezado__link" href="#sobre">
-            <span class="link__texto">sobre mi</span>
-          </a>
-        </li>
-        <li class="encabezado__item">
-          <a class="encabezado__link" href="#conocimientos">
-            <span class="link__texto">conocimientos</span>
-          </a>
-        </li>
-        <li class="encabezado__item">
-          <a class="encabezado__link" href="#proyectos">
-            <span class="link__texto">proyectos</span>
-          </a>
-        </li>
-        <li class="encabezado__item">
-          <a class="encabezado__link" href="#contacto">
-            <span class="link__texto">contacto</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+      <!-- La navegación controlada por el botón (mobile) / visible en pantallas medias y grandes -->
+      <nav
+        class="encabezado__nav"
+        role="navigation"
+        aria-label="Navegación principal"
+      >
+        <ul class="encabezado__lista">
+          <li class="encabezado__item">
+            <a class="encabezado__link" href="#sobre">
+              <span class="link__texto">sobre mi</span>
+            </a>
+          </li>
+          <li class="encabezado__item">
+            <a class="encabezado__link" href="#conocimientos">
+              <span class="link__texto">conocimientos</span>
+            </a>
+          </li>
+          <li class="encabezado__item">
+            <a class="encabezado__link" href="#proyectos">
+              <span class="link__texto">proyectos</span>
+            </a>
+          </li>
+          <li class="encabezado__item">
+            <a class="encabezado__link" href="#contacto">
+              <span class="link__texto">contacto</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <!-- ===================== CONTENIDO PRINCIPAL (MAIN) ================== -->
@@ -618,9 +618,11 @@
                 minlength="2"
                 placeholder=" María"
                 aria-required="true"
+                pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+"
+                title="Solo se permiten letras y espacios."
               />
               <span class="campo__error-mensaje"
-                >El nombre debe tener al menos 2 caracteres.</span
+                >El nombre debe tener al menos 2 caracteres y no números.</span
               >
             </div>
             <div class="formulario__campo">
@@ -634,9 +636,11 @@
                 minlength="2"
                 placeholder="Gomez"
                 aria-required="true"
+                pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+"
+                title="Solo se permiten letras y espacios."
               />
               <span class="campo__error-mensaje"
-                >El apellido debe tener al menos 2 caracteres.</span
+                >El apellido debe tener al menos 2 caracteres y no números.</span
               >
             </div>
           </div>
