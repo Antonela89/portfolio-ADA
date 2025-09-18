@@ -46,3 +46,31 @@ body {
   /* Se establece la tipografía por defecto para toda la página. */
   font-family: var(--roboto);
 }
+
+/* ==========================================================================
+   Paleta de Colores Alternativa (Modo Claro)
+   ========================================================================== */
+
+/* Cuando el body tenga la clase .light-mode, estas variables anularán
+   las definidas en :root, cambiando el tema de todo el sitio. */
+
+body.light-mode {
+  /* Fondo gris muy claro, reduce la fatiga visual */
+  --background-color: #f5f5f7;
+
+  /* Texto principal en un gris oscuro y suave */
+  --primary-text-color: #222222;
+
+  /* Gris medio que funciona bien sobre el fondo off-white */
+  --secondary-text-color: #6e6e73;
+
+  /* Púrpura original, funciona bien como acento en botones o links sobre este fondo */
+  --accent-color: #bb86fc; 
+
+  /* Transparencia del púrpura original, perfecta para hover effects */
+  --accent-color-transparencia: rgba(187, 134, 252, 0.25);
+
+  /* Turquesa original, usado para elementos decorativos donde no se necesite contraste de texto */
+  --secondary-accent-color: #03dac6;
+}
+

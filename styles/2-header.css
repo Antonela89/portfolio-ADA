@@ -5,7 +5,8 @@
     /* Propiedad lógica: equivalente a 'width'. Ocupa todo el ancho disponible. */
     inline-size: 100%;
     background-color: var(--accent-color);
-    display: flex;    /*Los hijos de este contenedor se ubican verticalmente*/
+    display: flex;
+    /*Los hijos de este contenedor se ubican verticalmente*/
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -23,8 +24,10 @@
 
 /* Estilos para la lista de navegación (ul) */
 .encabezado__lista {
-    list-style: none; /*Elimina las decoraciones (bullets) de la lista */
-    display: flex;  /*Los items (li) se ubican verticalmente*/ 
+    /*Elimina las decoraciones (bullets) de la lista */
+    list-style: none;
+    display: flex;
+    /*Los items (li) se ubican verticalmente*/
     flex-direction: column;
     align-items: center;
 }
@@ -37,7 +40,8 @@
 
 /* Estilos para los enlaces de navegación (a) */
 .encabezado__link {
-    position: relative;   /* Necesario para posicionar el pseudoelemento ::after */
+    position: relative;
+    /* Necesario para posicionar el pseudoelemento ::after */
     text-decoration: none;
     color: var(--primary-text-color);
     text-transform: uppercase;
@@ -60,7 +64,8 @@
      * Esto crea un efecto de "cross-fade" con el icono.
     */
     transition: color 0.2s ease, opacity 0.3s ease 0.2s;
-    opacity: 1; /* El texto es visible por defecto */
+    /* El texto es visible por defecto */
+    opacity: 1;
 }
 
 /*
@@ -70,7 +75,8 @@
 .encabezado__item:hover .link__texto,
 .encabezado__item:active .link__texto {
     color: var(--background-color);
-    opacity: 0; /*Oculta el texto al interactuar*/
+    /*Oculta el texto al interactuar*/
+    opacity: 0;
 }
 
 /*
@@ -78,13 +84,16 @@
  * Está oculto por defecto y se muestra durante la interacción.
 */
 .encabezado__link::after {
-    content: ''; /* El contenido se definirá más adelante para cada ítem */
+    content: '';
+    /* El contenido se definirá más adelante para cada ítem */
     position: absolute;
     /* Propiedades lógicas: centran el icono en el medio del enlace */
     inset-block-start: 50%;
     inset-inline-start: 50%;
-    transform: translate(-50%, -50%); /* Ajuste para un centrado perfecto */
-    opacity: 0; /* El icono está oculto por defecto */
+    transform: translate(-50%, -50%);
+    /* Ajuste para un centrado perfecto */
+    opacity: 0;
+    /* El icono está oculto por defecto */
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     font-size: 1.5rem;
@@ -99,7 +108,8 @@
 */
 .encabezado__item:hover .encabezado__link::after,
 .encabezado__item:active .encabezado__link::after {
-    opacity: 1; /*Hace visible el icono*/
+    opacity: 1;
+    /*Hace visible el icono*/
     color: var(--background-color);
 }
 
@@ -107,26 +117,100 @@
  * Define el icono específico para cada ítem de la lista usando su código Unicode de Font Awesome.
  * Se utiliza :nth-child() para seleccionar cada ítem por su posición.
 */
-.encabezado__lista .encabezado__item:hover .encabezado__link::after,
-.encabezado__lista .encabezado__item:active .encabezado__link::after {
-    opacity: 1;
-    color: var(--background-color);
-}
-
 .encabezado__lista .encabezado__item:nth-child(1) .encabezado__link::after {
-    content: '\f2bb'; /* Icono de "address-card" */
+    content: '\f2bb';
+    /* Icono de "address-card" */
 }
 
 .encabezado__lista .encabezado__item:nth-child(2) .encabezado__link::after {
-    content: '\f02d'; /* Icono de "book" */
+    content: '\f02d';
+    /* Icono de "book" */
 }
 
 .encabezado__lista .encabezado__item:nth-child(3) .encabezado__link::after {
-    content: '\f542'; /* Icono de conexión para proyectos */
+    content: '\f542';
+    /* Icono de conexión para proyectos */
 }
 
 .encabezado__lista .encabezado__item:nth-child(4) .encabezado__link::after {
-    content: '\f2b9'; /* Icono de "address-book" */
+    content: '\f2b9';
+    /* Icono de "address-book" */
+}
+
+/*Estilos de swicth para cambio de paleta de colores*/
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/* Opción 2: Al pasar el ratón por el contenedor del interruptor */
+.theme-switch-wrapper:hover .slider {
+    background-color: var(--secondary-accent-color);
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    inline-size: 3rem;
+    block-size: 1.5rem;
+}
+
+/* Oculta el checkbox por defecto */
+.theme-switch input {
+    opacity: 0;
+    inline-size: 0;
+    block-size: 0;
+}
+
+/* El fondo del interruptor */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: var(--secondary-accent-color);
+    transition: 0.4s;
+}
+
+/* El círculo que se mueve */
+.slider:before {
+    content: "";
+    position: absolute;
+    block-size: 1.25rem;
+    inline-size: 1.25rem;
+    inset-inline-start: 0.125rem;
+    inset-block-end: 0.125rem;
+    background-color: var(--primary-text-color);
+    transition: 0.4s;
+}
+
+.slider:hover:before {
+    background-color: var(--background-color);
+}
+
+.encabezado:hover .slider {
+    background-color: var(--secondary-accent-color);
+}
+
+/* Cuando el checkbox está activo (modo claro) */
+input:checked + .slider {
+    background-color: var(--accent-color);
+}
+
+input:focus-visible + .slider {
+    box-shadow: 0 0 1px var(--accent-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(1.5rem);
+}
+
+/* Estilo redondeado */
+.slider.round {
+    border-radius: 2rem;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
 
 /* ========== Estilos Responsivos (Tablet y superiores) ========== */
@@ -139,11 +223,13 @@
         position: sticky;
         /* Propiedad lógica: fija el elemento en la parte superior */
         inset-block-start: 0;
-        z-index: 1000; /* Asegura que esté por encima de otros contenidos */
+        z-index: 1000;
+        /* Asegura que esté por encima de otros contenidos */
         background-color: var(--accent-color-transparencia);
         /* Efecto de desenfoque para el fondo (mejora la legibilidad) */
         backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px); /* Prefijo para compatibilidad con Safari */
+        -webkit-backdrop-filter: blur(10px);
+        /* Prefijo para compatibilidad con Safari */
         transition: background-color 0.4s ease;
     }
 
@@ -161,12 +247,16 @@
         .encabezado::before {
             content: '';
             position: absolute;
-            inset: 0; /* Cubre todo el área del encabezado */
-            z-index: -1; /* Se posiciona detrás del contenido principal del encabezado */
+            inset: 0;
+            /* Cubre todo el área del encabezado */
+            z-index: -1;
+            /* Se posiciona detrás del contenido principal del encabezado */
             background-color: var(--accent-color);
-            animation: fadeOutOnScroll linear; /* Asocia la animación 'fadeOutOnScroll' al scroll de la página */
+            animation: fadeOutOnScroll linear;
+            /* Asocia la animación 'fadeOutOnScroll' al scroll de la página */
             animation-timeline: scroll(root);
-            animation-range-start: 0; /* La animación comienza al inicio del scroll */
+            animation-range-start: 0;
+            /* La animación comienza al inicio del scroll */
         }
 
         .encabezado:hover::before {
