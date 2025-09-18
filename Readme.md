@@ -2,7 +2,7 @@
 
 ¡Hola! 👋 Bienvenido al repositorio de mi portafolio personal. Este proyecto es una **Single Page Application (SPA)** estática, construida desde cero con un enfoque en **código limpio, diseño adaptable y accesibilidad web**.
 
-### ✨ **[Ver el proyecto en vivo](https://portfolioada-ab.netlify.app/])** ✨
+### ✨ **[Ver el proyecto en vivo](https://portfolioada-ab.netlify.app/)** ✨
 
 ---
 
