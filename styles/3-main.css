@@ -1,0 +1,60 @@
+/* ========== Estilos base para el encabezado (Enfoque Mobile First) ========== */
+
+/* Define el contenedor principal de la página, que alojará las diferentes secciones. */
+.principal {
+    display: flex;
+    flex-direction: column;  /* Apila las secciones hijas verticalmente. */
+    padding: 1rem;
+}
+
+/* Estilos para cada sección individual dentro del contenedor principal. */
+.principal__section {
+    inline-size: 100%;
+    display: flex;
+    flex-direction: column; /* Organiza el contenido interno de cada sección en una columna. */
+    gap: 1rem; /* Añade un espacio de 1rem entre los elementos hijos directos de la sección */
+}
+
+/*
+ * Aplica una animación de entrada a las secciones principales.
+ * El 'forwards' es crucial: asegura que la sección se mantenga visible (opacity: 1)
+ * una vez que la animación ha concluido.
+*/
+.principal__section {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/*
+ * Definición de la animación 'fadeIn'.
+ * Crea un efecto de aparición suave, moviéndose de abajo hacia arriba.
+*/
+@keyframes fadeIn {
+      /* Estado inicial de la animación (0%) */
+    from {
+        opacity: 0; /* El elemento es completamente transparente. */
+        transform: translateY(20px); /* El elemento está desplazado 20px hacia abajo. */
+    }
+
+      /* Estado final de la animación (100%) */
+    to {
+        opacity: 1; /* El elemento es completamente opaco. */
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para los títulos de cada sección. */
+.principal__titulo {
+    inline-size: 100%;
+    text-transform: uppercase;
+    font-family: var(--poppins);
+    background-color: var(--secondary-accent-color);
+    color: var(--background-color);
+    text-align: center;
+}
+
+/* ========== Estilos Responsivos (Tablet y superiores) ========== */
+/* ========== Tablet ========== */
+@media (min-width: 768px) {}
+
+/* ========== Desktop ========== */
+@media (min-width: 1024px) {}

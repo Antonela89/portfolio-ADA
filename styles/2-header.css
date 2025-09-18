@@ -1,0 +1,400 @@
+/* ========== Estilos base para el encabezado (Enfoque Mobile First) ========== */
+
+/* Define el contenedor principal del encabezado */
+.encabezado {
+    /* Propiedad lógica: equivalente a 'width'. Ocupa todo el ancho disponible. */
+    inline-size: 100%;
+    background-color: var(--accent-color);
+    padding: 1rem;
+    display: flex;
+    /* Centrado verticalmente */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.encabezado__superior {
+    inline-size: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+/* Estilo para el título principal del encabezado */
+.encabezado__titulo {
+    font-family: var(--poppins);
+    margin-inline-end: auto;
+    cursor: pointer;
+    white-space: nowrap;
+    /* Evita que el texto se rompa en varias líneas */
+    overflow: hidden;
+    /* Oculta cualquier desbordamiento inicial */
+    transition: width 0.3s ease-in-out;
+}
+
+.titulo__completo {
+    display: none;
+}
+
+.titulo__iniciales {
+    display: inline;
+    font-size: 1.8rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+
+.titulo__iniciales:hover,
+.titulo__iniciales:active,
+.encabezado__hamburguesa:hover,
+.encabezado__hamburguesa:active {
+    color: var(--background-color)
+}
+
+/*Estilos de swicth para cambio de paleta de colores*/
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    inline-size: 3rem;
+    block-size: 1.5rem;
+}
+
+/* Oculta el checkbox por defecto */
+.theme-switch input {
+    opacity: 0;
+    inline-size: 0;
+    block-size: 0;
+}
+
+/* El fondo del interruptor */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    transition: 0.4s;
+    background-color: #6A3297;
+    border: 1px solid var(--accent-color-transparencia)
+}
+
+/* El círculo que se mueve */
+.slider:before {
+    content: "";
+    position: absolute;
+    block-size: 1.25rem;
+    inline-size: 1.25rem;
+    inset-inline-start: 0.125rem;
+    inset-block-end: 0.125rem;
+    background-color: var(--primary-text-color);
+    transition: 0.4s;
+}
+
+.slider:hover:before {
+    background-color: var(--background-color);
+}
+
+/* Cuando el checkbox está activo (modo claro) */
+input:checked+.slider {
+    background-color: #6A3297;
+    border: 1px solid var(--accent-color-transparencia)
+}
+
+input:focus-visible+.slider {
+    box-shadow: 0 0 1px var(--accent-color);
+}
+
+input:checked+.slider:before {
+    transform: translateX(1.5rem);
+}
+
+/* Estilo redondeado */
+.slider.round {
+    border-radius: 2rem;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Estilos para el botón de hamburguesa */
+.encabezado__hamburguesa {
+    display: block;
+    /* Visible por defecto en móvil */
+    background-color: transparent;
+    border: none;
+    color: var(--primary-text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Contenedor de la lista de navegación */
+.encabezado__nav {
+    overflow: hidden;
+    /* Ocupa todo el ancho */
+    flex-basis: 100%;
+    max-block-size: 0;
+    transition: max-block-size 0.4s ease-in-out;
+}
+
+/* Clase que se añade para mostrar el menú */
+.encabezado__nav--visible {
+    max-block-size: 31.25rem;
+    /* Un valor lo suficientemente grande */
+}
+
+/* Estilos para la lista de navegación (ul) */
+.encabezado__lista {
+    /*Elimina las decoraciones (bullets) de la lista */
+    list-style: none;
+    padding-block: 1rem;
+}
+
+/* Estilos para cada ítem de la lista (li) */
+.encabezado__item {
+    /* Propiedad lógica: padding superior e inferior */
+    padding-block: 0.5rem;
+}
+
+/* Estilos para los enlaces de navegación (a) */
+.encabezado__link {
+    position: relative;
+    /* Necesario para posicionar el pseudoelemento ::after */
+    text-decoration: none;
+    color: var(--primary-text-color);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Propiedades lógicas: definen un tamaño mínimo para facilitar el toque */
+    min-inline-size: 9.375rem;
+    /*Ancho mínimo*/
+    min-block-size: 1.875rem;
+    /*Alto mínimo*/
+}
+
+/* Estilos para el texto dentro del enlace */
+.link__texto {
+    /*
+    Define una transición suave para el color y la opacidad.
+    - El color cambia en 0.2s.
+    - La opacidad espera 0.2s antes de empezar su transición de 0.3s.
+    Esto crea un efecto de "cross-fade" con el icono.
+    */
+    transition: color 0.2s ease, opacity 0.3s ease 0.2s;
+    /* El texto es visible por defecto */
+    opacity: 1;
+}
+
+/*
+ Efecto de interacción para el texto del enlace.
+ Se aplica tanto al pasar el ratón (:hover) como al pulsar en un dispositivo táctil (:active).
+*/
+.encabezado__item:hover .link__texto,
+.encabezado__item:active .link__texto {
+    color: var(--background-color);
+    /*Oculta el texto al interactuar*/
+    opacity: 0;
+}
+
+/*
+Pseudoelemento ::after para mostrar el icono de Font Awesome.
+Está oculto por defecto y se muestra durante la interacción.
+*/
+.encabezado__link::after {
+    content: '';
+    /* El contenido se definirá más adelante para cada ítem */
+    position: absolute;
+    /* Propiedades lógicas: centran el icono en el medio del enlace */
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    transform: translate(-50%, -50%);
+    /* Ajuste para un centrado perfecto */
+    opacity: 0;
+    /* El icono está oculto por defecto */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--primary-text-color);
+    /* El icono aparece con una transición suave, con un retardo para sincronizarse con el texto */
+    transition: opacity 0.3s ease 0.2s;
+}
+
+/*
+Muestra el icono al interactuar con el ítem.
+Funciona tanto en escritorio (:hover) como en móvil (:active).
+*/
+.encabezado__item:hover .encabezado__link::after,
+.encabezado__item:active .encabezado__link::after {
+    opacity: 1;
+    /*Hace visible el icono*/
+    color: var(--background-color);
+}
+
+/*
+Define el icono específico para cada ítem de la lista usando su código Unicode de Font Awesome.
+Se utiliza :nth-child() para seleccionar cada ítem por su posición.
+*/
+.encabezado__lista .encabezado__item:nth-child(1) .encabezado__link::after {
+    /* Icono de "address-card" */
+    content: '\f2bb';
+}
+
+.encabezado__lista .encabezado__item:nth-child(2) .encabezado__link::after {
+    /* Icono de "book" */
+    content: '\f02d';
+}
+
+.encabezado__lista .encabezado__item:nth-child(3) .encabezado__link::after {
+    /* Icono de conexión para proyectos */
+    content: '\f542';
+}
+
+.encabezado__lista .encabezado__item:nth-child(4) .encabezado__link::after {
+    /* Icono de "address-book" */
+    content: '\f2b9';
+}
+
+/* ========== Estilos Responsivos (Tablet y superiores) ========== */
+/* ========== Tablet ========== */
+@media (min-width: 768px) {
+
+    /* Funciona en todos los navegadores */
+    /* El encabezado se vuelve fijo en la parte superior y translúcido */
+    .encabezado {
+        position: sticky;
+        /* Propiedad lógica: fija el elemento en la parte superior */
+        inset-block-start: 0;
+        z-index: 1000;
+        /* Asegura que esté por encima de otros contenidos */
+        background-color: var(--accent-color-transparencia);
+        /* Efecto de desenfoque para el fondo (mejora la legibilidad) */
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        /* Prefijo para compatibilidad con Safari */
+        transition: background-color 0.4s ease;
+    }
+
+    /* Al pasar el ratón, el encabezado se vuelve sólido */
+    .encabezado:hover {
+        background-color: var(--accent-color);
+    }
+
+    /*
+     * MEJORA PROGRESIVA: Animación de fondo al hacer scroll.
+     * Se usa @supports para aplicar estos estilos solo si el navegador
+     * entiende las animaciones basadas en el timeline de scroll.
+    */
+    @supports (animation-timeline: scroll()) {
+        .encabezado::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            /* Cubre todo el área del encabezado */
+            z-index: -1;
+            /* Se posiciona detrás del contenido principal del encabezado */
+            background-color: var(--accent-color);
+            animation: fadeOutOnScroll linear;
+            /* Asocia la animación 'fadeOutOnScroll' al scroll de la página */
+            animation-timeline: scroll(root);
+            animation-range-start: 0;
+            /* La animación comienza al inicio del scroll */
+        }
+
+        .encabezado:hover::before {
+            transition: opacity 0.2s ease;
+        }
+    }
+
+    /* Define la animación que hace desaparecer el fondo al hacer scroll */
+    @keyframes fadeOutOnScroll {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    .encabezado__titulo:hover .titulo__completo {
+        display: inline;
+        color: var(--background-color)
+    }
+
+    .encabezado__titulo:hover .titulo__iniciales {
+        display: none;
+    }
+
+    .encabezado__hamburguesa {
+        display: none;
+    }
+
+    /* Mostramos el nav y la lista en línea */
+    .encabezado__nav {
+        inline-size: 100%;
+        display: block;
+        /* Aseguramos que sea visible */
+        max-block-size: none;
+        overflow: visible;
+        flex-basis: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .encabezado__lista {
+        display: flex;
+        flex-direction: row;
+        padding-block: 0;
+    }
+}
+
+/* ========== Desktop ========== */
+@media (min-width: 1024px) {
+
+    /* En pantallas grandes, el título se alinea a la izquierda y la navegación a la derecha */
+    .encabezado {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .encabezado__titulo {
+        margin-inline-end: 0;
+    }
+
+    /* El nombre completo es visible ahora */
+    .titulo__completo {
+        white-space: nowrap;
+        display: inline;
+    }
+
+    .titulo__iniciales {
+        display: none;
+    }
+
+    .encabezado__nav {
+        margin-inline-start: auto;
+        /* Empuja el nav y el switch a la derecha */
+        margin-inline-end: 1rem;
+        /* Da espacio antes del switch */
+
+    }
+
+    /* La lista de navegación ahora se muestra en horizontal */
+    .encabezado__lista {
+        display: inline-flex;
+        position: static;
+        transform: none;
+        background-color: transparent;
+        padding-block: 0;
+        flex-direction: row;
+    }
+
+    .encabezado__link {
+        flex-direction: column;
+        align-items: center;
+    }
+}

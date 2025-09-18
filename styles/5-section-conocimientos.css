@@ -1,0 +1,107 @@
+/* ========== Estilos base para el encabezado (Enfoque Mobile First) ========== */
+.principal__section--conocimientos {
+    /* Espacio reservado para posibles estilos del contenedor de la sección. */
+}
+
+/* Contenedor de todas las tarjetas de conocimientos. */
+.tarjetas-conocimientos {
+    inline-size: 100%;
+    display: flex;
+    justify-content: center; /* Centra las tarjetas horizontalmente. */
+    flex-wrap: wrap; /* Permite que las tarjetas pasen a la siguiente línea si no caben. */
+    gap: 0.5rem; /* Espacio entre las tarjetas. */
+    padding-inline: 1rem; /* Padding a los lados (izquierdo y derecho). */
+    /*
+     Define una perspectiva 3D para los elementos hijos. Es crucial para que las transformaciones como 'rotateY' tengan un efecto de profundidad visible.
+    */
+    perspective: 62.5rem;
+}
+
+/* Estilo individual para cada tarjeta. */
+.tarjetas-conocimientos__tarjeta {
+    /* 
+    flex-grow: 1 (puede crecer), flex-shrink: 1 (puede encogerse), flex-basis: calcula el ancho base para dos columnas con un gap de 0.5rem. 
+    */
+    max-inline-size: calc(50% - 0.25rem);
+    flex: 1 1 calc(50% - 0.25rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    outline: 1px solid var(--accent-color);
+    background-color: var(--background-color);
+    border-radius: 0.5rem;
+    padding: 1rem;
+     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, outline 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Efectos al pasar el ratón (:hover) o al pulsar en un dispositivo táctil (:active). */
+.tarjetas-conocimientos__tarjeta:hover,
+.tarjetas-conocimientos__tarjeta:active {
+    /* Brillo de múltiples capas con box-shadow */
+    box-shadow: 0 0 5px var(--secondary-accent-color),
+        0 0 10px var(--secondary-accent-color),
+        0 0 20px rgba(3, 218, 198, 0.5);
+    /*
+     - translateY(-5px): Eleva la tarjeta.
+     - rotateY(-10deg): La gira ligeramente en el eje Y para el efecto 3D.
+     - scale(1.05): La agranda un 5%.
+     */
+    transform: translateY(-5px) rotateY(-10deg) scale(1.05);
+    outline: 2px solid var(--secondary-accent-color);
+    color: var(--accent-color);
+}
+
+/* Efecto para el icono dentro de la tarjeta al interactuar. */
+.tarjetas-conocimientos__tarjeta:hover .tarjetas-conocimientos__icono,
+.tarjetas-conocimientos__tarjeta:active .tarjetas-conocimientos__icono {
+    /* Añade un brillo al propio icono. */
+    text-shadow: 0 0 8px var(--secondary-accent-color);
+    /* Crea un contorno al texto del icono (útil para fuentes de iconos). */
+    -webkit-text-stroke: 1px var(--background-color);
+}
+
+/* Estilo del icono de la tarjeta. */
+.tarjetas-conocimientos__icono {
+    font-size: 3rem;
+    transition: text-shadow 0.3s ease-in-out, -webkit-text-stroke 0.3s ease-in-out;
+}
+
+/* Estilo del título de la tarjeta. */
+.tarjetas-conocimientos__titulo {
+    font-size: 1.5rem;
+    font-family: var(--roboto);
+    text-transform: capitalize;
+}
+
+/* ========== Estilos Responsivos (Tablet y superiores) ========== */
+/* ========== Tablet ========== */
+@media (min-width: 768px) {
+    .tarjetas-conocimientos {
+        gap: 0.75rem;
+        padding-inline: 1.5rem;
+    }
+
+    .tarjetas-conocimientos__tarjeta {
+        /*
+        (100% - espacio_total_de_gaps) / numero_de_columnas
+        (100% - (2 * 0.75rem)) / 3
+       */
+        max-inline-size: calc((100% - 1.5rem) / 3);
+        flex-basis: calc((100% - 1.5rem) / 3);
+    }
+}
+
+/* ========== Desktop ========== */
+@media (min-width: 1024px) {
+    .tarjetas-conocimientos {
+        gap: 1rem;
+        padding: 2rem;
+    }
+
+    .tarjetas-conocimientos__tarjeta {
+        /* (100% - (4 * 1rem)) / 5 */
+        max-inline-size: calc((100% - 4rem) / 5);
+        flex-basis: calc((100% - 4rem) / 5);
+    }
+}

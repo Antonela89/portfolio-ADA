@@ -1,0 +1,180 @@
+/* ========== Estilos base para el encabezado (Enfoque Mobile First) ========== */
+.principal__section--proyectos {
+  padding-block: 1.5rem; /* Margen superior e inferior. */
+  text-align: center;
+}
+
+/* Contenedor del carrusel */
+.tarjetas-proyectos {
+  inline-size: 100%;
+  block-size: auto;
+  display: flex;
+  /* Permite el scroll horizontal */
+  overflow-x: auto;
+  /*
+   * Activa el "scroll snapping" en el eje X. 'mandatory' fuerza al navegador
+   * a detenerse en un punto de anclaje (una tarjeta) después de que el usuario deja de desplazarse.
+   */
+  scroll-snap-type: x mandatory;
+  /* Scroll suave en dispositivos móviles */
+  -webkit-overflow-scrolling: touch;
+  padding-block: 1.5rem;
+}
+
+/* --- ESTILOS PERSONALIZADOS PARA LA BARRA DE SCROLL --- */
+/* Para Firefox */
+.tarjetas-proyectos {
+  scrollbar-width: thin; /* Barra de scroll delgada. */
+  scrollbar-color: var(--accent-color) var(--background-color);
+}
+
+/* Para WebKit (Chrome, Safari, Edge, Opera) */
+.tarjetas-proyectos::-webkit-scrollbar {
+  block-size: 1rem; /* Altura de la barra de scroll. */
+}
+
+.tarjetas-proyectos::-webkit-scrollbar-track {
+  background-color: var(--background-color);
+  border-radius: 0.75rem;
+  margin-inline: 1rem; /* Añade margen a los lados del riel. */
+}
+
+.tarjetas-proyectos::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 0.75rem;
+  /* Crea un borde del color del fondo para dar un efecto de "flotación". */
+  border: 2px solid var(--background-color);
+}
+
+.tarjetas-proyectos::-webkit-scrollbar-thumb:hover,
+.tarjetas-proyectos::-webkit-scrollbar-thumb:active {
+  background-color: var(--secondary-accent-color);
+}
+
+
+/* Tarjeta individual del proyecto */
+.tarjetas-proyectos__tarjeta {
+  /* Cada tarjeta ocupa el 80% del ancho del contenedor */
+  flex: 0 0 80%;
+  max-width: 25rem; /* Evita que la tarjeta sea demasiado ancha en pantallas grandes. */
+  margin-inline: 1rem;  /* Margen a los lados de cada tarjeta. */
+  /* Define este elemento como un punto de anclaje para el scroll, alineándolo al centro. */
+  scroll-snap-align: center;
+  background-color: var(--accent-color-transparencia);
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjetas-proyectos__tarjeta:hover,
+.tarjetas-proyectos__tarjeta:active {
+  transform: translateY(-0.75rem); /* Eleva la tarjeta al interactuar. */
+  box-shadow: 0 5px 15px var(--secondary-accent-color);  /* Añade una sombra de acento. */
+}
+
+/* Enlace que envuelve toda la tarjeta. */
+.tarjeta-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Contenedor del iframe que mantiene una proporción de 16:9. */
+.tarjeta-iframe-contenedor {
+  border-radius: 0.25rem;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden; /* Oculta las partes del iframe que se salen del contenedor. */
+  background-color: var(--primary-text-color);  /* Color de fondo mientras carga el iframe. */
+} 
+
+/*
+ * LA "TÉCNICA DEL IFRAME ESCALADO" para mostrar una vista previa responsive.
+*/
+.tarjeta-iframe {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  /* 1. Se hace el iframe gigante (ej. 4 veces más grande - Viewport: 1280px). */
+  inline-size: 400%;
+  block-size: 400%;
+  /* 2. Se escala a la inversa (1/4 = 0.25) para que quepa en el contenedor.
+    Esto simula una vista de escritorio en un espacio pequeño. */
+  transform: scale(0.25);
+  /* 3. Se asegura que la transformación ocurra desde la esquina superior izquierda. */
+  transform-origin: 0 0;
+  /* 4. CRÍTICO: Desactiva los eventos de ratón/táctiles para que el usuario pueda
+  desplazar el carrusel sin quedarse "atrapado" en el iframe. */
+  pointer-events: none;
+  border: 0;
+}
+
+/* Contenido de texto debajo del iframe. */
+.tarjeta-contenido {
+  padding-block: 1.5rem;
+}
+
+/* Título del proyecto. */
+.tarjeta-contenido h3 {
+  margin-inline-end: 0.5rem;
+  font-size: 1.5rem;
+}
+
+/* Descripción del proyecto. */
+.tarjeta-contenido p {
+  font-size: 1rem;
+  color: var(--secondary-text-color);
+}
+
+/* Botón de enlace a GitHub. */
+.tarjeta-github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  color: var(--background-color);
+  background-color: var(--secondary-accent-color);
+  transition: background-color 0.3s ease;
+}
+
+.tarjeta-github:hover,
+.tarjeta-github:active {
+  background-color: var(--accent-color);
+}
+
+
+/* Icono dentro del botón de GitHub. */
+.tarjeta__icono {
+  font-size: 1.5rem;
+  color: var(--background-color);
+  transition: color 0.3s ease, transform 0.3s ease, -webkit-text-stroke 0.3s ease;
+}
+
+.tarjeta-github:hover .tarjeta__icono,
+.tarjeta-github:active .tarjeta__icono  {
+  color: var(--primary-text-color);
+  transform: scale(1.5);
+  -webkit-text-stroke: 1px var(--background-color);
+}
+
+/* ========== Estilos Responsivos (Tablet y superiores) ========== */
+/* ========== Tablet ========== */
+@media (min-width: 768px) {
+  /* En tablet, las tarjetas son más pequeñas, mostrando aprox. 2 a la vez. */
+  .tarjetas-proyectos__tarjeta {
+    flex-basis: 45%;
+  }
+}
+
+/* ========== Desktop ========== */
+@media (min-width: 1024px) {
+  /* En escritorio, se muestran aprox. 3 tarjetas a la vez. */
+  .tarjetas-proyectos__tarjeta {
+    flex-basis: 30%;
+  }
+}

@@ -1,0 +1,62 @@
+:root {
+  /* ========== Esquema de Colores (Paleta para un tema oscuro o "Dark Mode") ========== */
+  /* Negro profundo, no puro */
+  --background-color: #121212;
+  /* Blanco grisáceo para no cansar la vista */
+  --primary-text-color: #e0e0e0;
+  /* Gris medio para detalles */
+  --secondary-text-color: #a0a0a0;
+  /* Púrpura neón como color de acento */
+  --accent-color: #bb86fc;
+  /* Púrpura neón con transparencia*/
+  --accent-color-transparencia: rgba(187, 134, 252, 0.5);
+  /* Turquesa para un segundo acento */
+  --secondary-accent-color: #03dac6;
+
+  /* ========== Definición de Tipografías ========== */
+  /* Se almacenan las familias tipográficas en variables para facilitar
+     su reutilización y poder cambiarlas globalmente si es necesario. */
+  --roboto: "Roboto", sans-serif;
+  --poppins: "Poppins", sans-serif;
+}
+
+/* ========== Reseteo de Estilos Globales (CSS Reset) ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ========== Estilos Base para el Body ========== */
+body {
+  /*
+   * Propiedades lógicas:
+  'inline-size' es el equivalente a 'width'. Se asegura de que el cuerpo
+  ocupe el 100% del ancho de la ventana gráfica (viewport).
+   */
+  inline-size: 100vw;
+  /* 'min-block-size' es el equivalente a 'min-height'. Garantiza que el cuerpo
+     ocupe como mínimo el 100% de la altura de la ventana, evitando que el pie de página
+     "suba" en páginas con poco contenido. */
+  min-block-size: 100vh;
+  /* Se aplican los colores de fondo y texto definidos en las variables de :root. */
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+  /* Se establece la tipografía por defecto para toda la página. */
+  font-family: var(--roboto);
+}
+
+/* ==========  Paleta de Colores Alternativa (Modo Claro) ========== */
+
+/* Cuando el body tenga la clase .light-mode, estas variables anularán
+   las definidas en :root, cambiando el tema de todo el sitio.  */
+
+body.light-mode {
+  /* Fondo gris muy claro, reduce la fatiga visual */
+  --background-color: #f5f5f7;
+  /* Texto principal en un gris oscuro y suave */
+  --primary-text-color: #222222;
+  /* Gris medio que funciona bien sobre el fondo off-white */
+  --secondary-text-color: #6e6e73;
+}

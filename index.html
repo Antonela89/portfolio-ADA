@@ -3,15 +3,789 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Antonela Borgogono</title>
-    <!-- link css -->
+    <title>Portfolio - Antonela Borgogono | Desarrolladora Web</title>
+
+    <!-- METADATOS PARA SEO (Optimización para Motores de Búsqueda) -->
+    <meta
+      name="description"
+      content="Portafolio de Antonela Borgogono, desarrolladora web especializada en Front-End con React, Back-End y IA. Explora mis proyectos y habilidades."
+    />
+    <meta
+      name="keywords"
+      content="Antonela Borgogono, portfolio, desarrolladora web, front-end, react, back-end, javascript, argentina"
+    />
+    <meta name="author" content="Antonela Borgogono" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- METADATOS PARA REDES SOCIALES (Open Graph & Twitter Cards) -->
+    <!-- Open Graph (para Facebook, LinkedIn, WhatsApp, etc.) -->
+    <meta
+      property="og:title"
+      content="Portfolio - Antonela Borgogono | Desarrolladora Web"
+    />
+    <meta
+      property="og:description"
+      content="Explora los proyectos y habilidades de Antonela Borgogono, desarrolladora web."
+    />
+    <meta
+      property="og:image"
+      content="https://[URL-DE-TU-SITIO]/images/banner/perfil.jpg"
+    />
+    <!-- ¡IMPORTANTE! Reemplazar la URL cuando se hace deploy -->
+    <meta property="og:url" content="https://[URL-DE-TU-SITIO]/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Cards (para Twitter) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Portfolio - Antonela Borgogono | Desarrolladora Web"
+    />
+    <meta
+      name="twitter:description"
+      content="Explora los proyectos y habilidades de Antonela Borgogono, desarrolladora web."
+    />
+    <meta
+      name="twitter:image"
+      content="https://[URL-DE-TU-SITIO]/images/banner/perfil.jpg"
+    />
+    <!-- ¡IMPORTANTE! Reemplazar la URL cuando se hace deploy -->
+
+    <!-- OTROS METADATOS -->
+    <!-- Color de la barra de URL en móviles (--accent-color) -->
+    <meta name="theme-color" content="#bb86fc" />
+
+    <!-- links css -->
+
+    <!-- Propósito:
+    La numeración de los archivos (1-config, 2-header, etc.) asegura un orden de carga predecible, donde las configuraciones base se cargan primero y los componentes específicos después. -->
+
+    <link rel="stylesheet" href="/styles/1-config.css" />
+    <link rel="stylesheet" href="/styles/2-header.css" />
+    <link rel="stylesheet" href="/styles/3-main.css" />
+    <link rel="stylesheet" href="/styles/4-section-sobreMi.css" />
+    <link rel="stylesheet" href="/styles/5-section-conocimientos.css" />
+    <link rel="stylesheet" href="/styles/6-section-frase.css" />
+    <link rel="stylesheet" href="/styles/7-section-proyectos.css" />
+    <link rel="stylesheet" href="/styles/8-section-contacto.css" />
+    <link rel="stylesheet" href="/styles/9-footer.css" />
+
     <!-- link fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon_io//favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon_io//favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon_io//site.webmanifest" />
     <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
   </head>
   <body>
-    <header class=""></header>
-    <main class=""></main>
-    <footer class=""></footer>
+    <!-- ======================= HEADER / NAVEGACIÓN ======================= -->
+
+    <header class="encabezado" role="banner">
+      <div class="encabezado__superior">
+        <!-- Elemento Izquierda: Título con iniciales/nombre completo -->
+        <h1 class="encabezado__titulo">
+          <span class="titulo__completo">Antonela Borgogno</span>
+          <span class="titulo__iniciales" aria-hidden="true">AB</span>
+        </h1>
+        <!-- Elemento Centro: Switch de tema -->
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="theme-switch-checkbox">
+            <input
+              type="checkbox"
+              id="theme-switch-checkbox"
+              aria-label="Cambiar tema de color"
+            />
+            <div class="slider round"></div>
+          </label>
+        </div>
+        <!-- Elemento Derecha: Botón Hamburguesa -->
+        <button class="encabezado__hamburguesa" aria-label="Abrir menú">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <!-- La navegación controlada por el botón (mobile) / visible en pantallas medias y grandes -->
+      <nav
+        class="encabezado__nav"
+        role="navigation"
+        aria-label="Navegación principal"
+      >
+        <ul class="encabezado__lista">
+          <li class="encabezado__item">
+            <a class="encabezado__link" href="#sobre">
+              <span class="link__texto">sobre mi</span>
+            </a>
+          </li>
+          <li class="encabezado__item">
+            <a class="encabezado__link" href="#conocimientos">
+              <span class="link__texto">conocimientos</span>
+            </a>
+          </li>
+          <li class="encabezado__item">
+            <a class="encabezado__link" href="#proyectos">
+              <span class="link__texto">proyectos</span>
+            </a>
+          </li>
+          <li class="encabezado__item">
+            <a class="encabezado__link" href="#contacto">
+              <span class="link__texto">contacto</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===================== CONTENIDO PRINCIPAL (MAIN) ================== -->
+
+    <main class="principal" role="main">
+      <!-- ========== Seccción: Sobre Mí ========== -->
+
+      <section
+        class="principal__section principal__section--sobre"
+        id="sobre"
+        aria-labelledby="titulo-sobre-mi"
+      >
+        <h2 class="principal__titulo" id="titulo-sobre-mi">sobre mi</h2>
+        <div class="sobre">
+          <figure class="sobre-contenedor-imagen">
+            <picture>
+              <source srcset="/images/banner/perfil.webp" type="image/webp" />
+              <source srcset="/images/banner/perfil.jpg" type="image/jpeg" />
+              <img
+                class="sobre__imagen"
+                src="/images/banner/perfil.jpg"
+                alt="Retrato artístico de una mujer con cabello oscuro. Imagen generada por IA."
+              />
+            </picture>
+            <figcaption class="sobre__imagen-caption">
+              Imagen generada con IA - Nano Banana
+            </figcaption>
+          </figure>
+          <div class="sobre__descripcion">
+            <p class="descripcion__tablet">
+              Desarrolladora web versátil con experiencia formativa en
+              desarrollo Front-End (React), Back-End e Inteligencia Artificial.
+              Me especializo en transformar diseños en aplicaciones web
+              funcionales y de alta calidad, prestando siempre la máxima
+              atención al detalle para asegurar un producto final robusto y
+              amigable para el usuario. Busco aplicar mis habilidades para
+              contribuir a proyectos innovadores.
+            </p>
+            <p class="descripcion__mobile">
+              <b>Desarrolladora Web | Front-End con React | Back-End | IA.</b>
+              <br />
+              Convierto ideas en interfaces limpias y funcionales con una gran
+              atención al detalle.
+            </p>
+          </div>
+        </div>
+        <a class="sobre__enlace" href="#proyectos">Mira mis proyectos...</a>
+      </section>
+
+      <!-- ========== Fin de Seccción: Sobre Mí ========== -->
+
+      <!-- ========== Seccción: Conocimientos ========== -->
+
+      <section
+        class="principal__section principal__section--conocimientos"
+        id="conocimientos"
+        aria-labelledby="titulo-conocimientos"
+      >
+        <h2 class="principal__titulo" id="titulo-conocimientos">
+          conocimientos
+        </h2>
+        <div class="tarjetas-conocimientos">
+          <article class="tarjetas-conocimientos__tarjeta">
+            <i
+              class="fa-brands fa-html5 tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
+            <h3 class="tarjetas-conocimientos__titulo">html</h3>
+          </article>
+          <article class="tarjetas-conocimientos__tarjeta">
+            <i
+              class="fa-brands fa-css3 tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
+            <h3 class="tarjetas-conocimientos__titulo">ccs3</h3>
+          </article>
+          <article class="tarjetas-conocimientos__tarjeta">
+            <i
+              class="fa-brands fa-bootstrap tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
+            <h3 class="tarjetas-conocimientos__titulo">bootstrap</h3>
+          </article>
+          <article class="tarjetas-conocimientos__tarjeta">
+            <i
+              class="fa-brands fa-js tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
+            <h3 class="tarjetas-conocimientos__titulo">js</h3>
+          </article>
+          <article class="tarjetas-conocimientos__tarjeta">
+            <i
+              class="fa-brands fa-figma tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
+            <h3 class="tarjetas-conocimientos__titulo">figma</h3>
+          </article>
+          <article class="tarjetas-conocimientos__tarjeta">
+            <i
+              class="fa-brands fa-git tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
+            <h3 class="tarjetas-conocimientos__titulo">git</h3>
+          </article>
+          <article class="tarjetas-conocimientos__tarjeta">
+            <i
+              class="fa-brands fa-github tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
+            <h3 class="tarjetas-conocimientos__titulo">github</h3>
+          </article>
+          <article class="tarjetas-conocimientos__tarjeta">
+            <i
+              class="fa-brands fa-trello tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
+            <h3 class="tarjetas-conocimientos__titulo">trello</h3>
+          </article>
+          <article class="tarjetas-conocimientos__tarjeta">
+            <i
+              class="fa-brands fa-react tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
+            <h3 class="tarjetas-conocimientos__titulo">react</h3>
+          </article>
+          <article class="tarjetas-conocimientos__tarjeta">
+            <i
+              class="fa-brands fa-angular tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
+            <h3 class="tarjetas-conocimientos__titulo">angular</h3>
+          </article>
+          <article class="tarjetas-conocimientos__tarjeta">
+            <i
+              class="fa-brands fa-node tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
+            <h3 class="tarjetas-conocimientos__titulo">node</h3>
+          </article>
+          <article class="tarjetas-conocimientos__tarjeta">
+            <i
+              class="fa-brands fa-python tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
+            <h3 class="tarjetas-conocimientos__titulo">python</h3>
+          </article>
+          <article class="tarjetas-conocimientos__tarjeta">
+            <i
+              class="fa-brands fa-markdown tarjetas-conocimientos__icono"
+              aria-hidden="true"
+            ></i>
+            <h3 class="tarjetas-conocimientos__titulo">markdown</h3>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========== Fin de Seccción: Conocimientos ========== -->
+
+      <!-- ========== Aside: Frase Inspiradora ========== -->
+
+      <aside class="principal__section principal__section--frase">
+        <figure>
+          <blockquote
+            class="frase__cita"
+            cite="https://wearetechwomen.com/inspirational-quotes-ada-lovelace-the-first-computer-programmer/"
+          >
+            "Cuanto más estudio, más insaciable siento que es mi genio para
+            ello."
+          </blockquote>
+          <figcaption class="frase__autor">— Ada Lovelace</figcaption>
+        </figure>
+      </aside>
+
+      <!-- ========== Fin de Aside: Frase Inspiradora ========== -->
+
+      <!-- ========== Seccción: Proyectos ========== -->
+
+      <section
+        class="principal__section principal__section--proyectos"
+        id="proyectos"
+        aria-labelledby="titulo-proyectos"
+      >
+        <h2 class="principal__titulo" id="titulo-proyectos">proyectos</h2>
+        <div class="tarjetas-proyectos">
+          <article class="tarjetas-proyectos__tarjeta">
+            <a
+              class="tarjeta-link"
+              href="https://pet-shopab.netlify.app/"
+              target="_blank"
+              aria-label="Ver el proyecto Pet Shop en vivo"
+            >
+              <div class="tarjeta-iframe-contenedor">
+                <iframe
+                  class="tarjeta-iframe"
+                  src="https://pet-shopab.netlify.app/"
+                  frameborder="0"
+                  title="Vista previa del proyecto Pet Shop"
+                ></iframe>
+              </div>
+              <div class="tarjeta-contenido">
+                <h3>Pet Shop</h3>
+                <p>Tienda de mascotas.</p>
+              </div>
+            </a>
+            <a
+              class="tarjeta-github"
+              href="https://github.com/Antonela89/FrontEnd_Ada/tree/main/modulo_2/pet-shop/5-versionPropia-responsive"
+              target="_blank"
+              aria-label="Ver el código de Pet Shop en GitHub"
+            >
+              <i
+                class="fa-brands fa-github tarjeta__icono"
+                aria-hidden="true"
+              ></i>
+            </a>
+          </article>
+          <article class="tarjetas-proyectos__tarjeta">
+            <a
+              class="tarjeta-link"
+              href="https://bank-react-styled-components-j2qw.vercel.app/"
+              target="_blank"
+            >
+              <div class="tarjeta-iframe-contenedor">
+                <iframe
+                  class="tarjeta-iframe"
+                  src="https://bank-react-styled-components-j2qw.vercel.app/"
+                  frameborder="0"
+                  title="Vista previa de Smart Bank"
+                ></iframe>
+              </div>
+              <div class="tarjeta-contenido">
+                <h3>Plataforma Bank</h3>
+                <p>Prueba de modo oscuro con React</p>
+              </div>
+            </a>
+            <a
+              class="tarjeta-github"
+              href="https://github.com/Antonela89/Bank---React---StyledComponents"
+              target="_blank"
+              aria-label="Ver el código en GitHub"
+            >
+              <i
+                class="fa-brands fa-github tarjeta__icono"
+                aria-hidden="true"
+              ></i>
+            </a>
+          </article>
+          <article class="tarjetas-proyectos__tarjeta">
+            <a
+              class="tarjeta-link"
+              href="https://react-one-colaboradores.vercel.app/"
+              target="_blank"
+            >
+              <div class="tarjeta-iframe-contenedor">
+                <iframe
+                  class="tarjeta-iframe"
+                  src="https://react-one-colaboradores.vercel.app/"
+                  frameborder="0"
+                  title="Vista previa de Organigrama"
+                ></iframe>
+              </div>
+              <div class="tarjeta-contenido">
+                <h3>Organigrama Alura</h3>
+                <p>Organigrama de una organización</p>
+              </div>
+            </a>
+            <a
+              class="tarjeta-github"
+              href="https://github.com/Antonela89/React-One-Colaboradores"
+              target="_blank"
+              aria-label="Ver el código en GitHub"
+            >
+              <i
+                class="fa-brands fa-github tarjeta__icono"
+                aria-hidden="true"
+              ></i>
+            </a>
+          </article>
+          <article class="tarjetas-proyectos__tarjeta">
+            <a
+              class="tarjeta-link"
+              href="https://antonela89.github.io/humaya/"
+              target="_blank"
+            >
+              <div class="tarjeta-iframe-contenedor">
+                <iframe
+                  class="tarjeta-iframe"
+                  src="https://antonela89.github.io/humaya/"
+                  frameborder="0"
+                  title="Vista previa de Humaya"
+                ></iframe>
+              </div>
+              <div class="tarjeta-contenido">
+                <h3>Humaya</h3>
+                <p>Página de venta de dulce de leche</p>
+              </div>
+            </a>
+            <a
+              class="tarjeta-github"
+              href="https://github.com/Antonela89/humaya"
+              target="_blank"
+              aria-label="Ver el código en GitHub"
+            >
+              <i
+                class="fa-brands fa-github tarjeta__icono"
+                aria-hidden="true"
+              ></i>
+            </a>
+          </article>
+          <article class="tarjetas-proyectos__tarjeta">
+            <a
+              class="tarjeta-link"
+              href="https://react-06-pokeapi.vercel.app/"
+              target="_blank"
+            >
+              <div class="tarjeta-iframe-contenedor">
+                <iframe
+                  class="tarjeta-iframe"
+                  src="https://react-06-pokeapi.vercel.app/"
+                  frameborder="0"
+                  title="Vista previa de PokeApi"
+                ></iframe>
+              </div>
+              <div class="tarjeta-contenido">
+                <h3>PokeApi</h3>
+                <p>Ejemplo de uso de api con React</p>
+              </div>
+            </a>
+            <a
+              class="tarjeta-github"
+              href="https://github.com/Antonela89/react-06-pokeapi"
+              target="_blank"
+              aria-label="Ver el código de Pet Shop en GitHub"
+            >
+              <i
+                class="fa-brands fa-github tarjeta__icono"
+                aria-hidden="true"
+              ></i>
+            </a>
+          </article>
+          <article class="tarjetas-proyectos__tarjeta">
+            <a
+              class="tarjeta-link"
+              href="https://23644-grupo1-reac-tv.vercel.app/"
+              target="_blank"
+            >
+              <div class="tarjeta-iframe-contenedor">
+                <iframe
+                  class="tarjeta-iframe"
+                  src="https://23644-grupo1-reac-tv.vercel.app/"
+                  frameborder="0"
+                  sandbox="allow-scripts"
+                  title="Vista previa de ReacTV"
+                ></iframe>
+              </div>
+              <div class="tarjeta-contenido">
+                <h3>ReacTV</h3>
+                <p>Proyecto final curso Codo a Codo React</p>
+              </div>
+            </a>
+            <a
+              class="tarjeta-github"
+              href="https://github.com/ReacTV23/23644-Grupo1-ReacTV"
+              target="_blank"
+              aria-label="Ver el código de Pet Shop en GitHub"
+            >
+              <i
+                class="fa-brands fa-github tarjeta__icono"
+                aria-hidden="true"
+              ></i>
+            </a>
+          </article>
+          <article class="tarjetas-proyectos__tarjeta">
+            <a
+              class="tarjeta-link"
+              href="https://antonela89.github.io/gestor_usuarios/"
+              target="_blank"
+            >
+              <div class="tarjeta-iframe-contenedor">
+                <iframe
+                  class="tarjeta-iframe"
+                  src="https://antonela89.github.io/gestor_usuarios/"
+                  frameborder="0"
+                  title="Vista previa de Gestor Usuario"
+                ></iframe>
+              </div>
+              <div class="tarjeta-contenido">
+                <h3>Gestor Usuarios</h3>
+                <p>Prueba técnica para ingreso de Curso InTechMOM</p>
+              </div>
+            </a>
+            <a
+              class="tarjeta-github"
+              href="https://github.com/Antonela89/gestor_usuarios"
+              target="_blank"
+              aria-label="Ver el código en GitHub"
+            >
+              <i
+                class="fa-brands fa-github tarjeta__icono"
+                aria-hidden="true"
+              ></i>
+            </a>
+          </article>
+          <article class="tarjetas-proyectos__tarjeta">
+            <a
+              class="tarjeta-link"
+              href="https://antonela89.github.io/SWEETHOME/"
+              target="_blank"
+            >
+              <div class="tarjeta-iframe-contenedor">
+                <iframe
+                  class="tarjeta-iframe"
+                  src="https://antonela89.github.io/SWEETHOME/"
+                  frameborder="0"
+                  title="Vista previa de SWEETHOME"
+                ></iframe>
+              </div>
+              <div class="tarjeta-contenido">
+                <h3>SWEETHOME</h3>
+                <p>Página de adopción de mascotas</p>
+              </div>
+            </a>
+            <a
+              class="tarjeta-github"
+              href="https://github.com/Antonela89/SWEETHOME"
+              target="_blank"
+              aria-label="Ver el código en GitHub"
+            >
+              <i
+                class="fa-brands fa-github tarjeta__icono"
+                aria-hidden="true"
+              ></i>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========== Fin de Seccción: Proyectos ========== -->
+
+      <!-- ========== Seccción: Contacto ========== -->
+
+      <section
+        class="principal__section principal__section--contacto"
+        id="contacto"
+        aria-labelledby="titulo-contacto"
+      >
+        <h2 class="principal__titulo" id="titulo-contacto">contacto</h2>
+        <form action="" class="formulario" novalidate>
+          <div class="formulario__fila">
+            <div class="formulario__campo">
+              <label class="campo__label" for="nombre">nombre:</label>
+              <input
+                class="campo__input"
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                minlength="2"
+                placeholder=" María"
+                aria-required="true"
+                pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+"
+                title="Solo se permiten letras y espacios."
+              />
+              <span class="campo__error-mensaje"
+                >El nombre debe tener al menos 2 caracteres y no números.</span
+              >
+            </div>
+            <div class="formulario__campo">
+              <label class="campo__label" for="apellido">apellido:</label>
+              <input
+                class="campo__input"
+                type="text"
+                id="apellido"
+                name="apellido"
+                required
+                minlength="2"
+                placeholder="Gomez"
+                aria-required="true"
+                pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+"
+                title="Solo se permiten letras y espacios."
+              />
+              <span class="campo__error-mensaje"
+                >El apellido debe tener al menos 2 caracteres y no números.</span
+              >
+            </div>
+          </div>
+          <div class="formulario__campo">
+            <label class="campo__label" for="email">e-mail:</label>
+            <input
+              class="campo__input"
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="mariagomez@correo.com"
+              aria-required="true"
+            />
+            <span class="campo__error-mensaje"
+              >Por favor, introduce un e-mail válido.</span
+            >
+          </div>
+          <div class="formulario__campo">
+            <label class="campo__label" for="mensaje">mensaje:</label>
+            <textarea
+              class="campo__input campo__input--textarea"
+              name="mensaje"
+              id="mensaje"
+              required
+              minlength="10"
+              placeholder="Ingresa tu mensaje"
+              aria-required="true"
+            ></textarea>
+            <span class="campo__error-mensaje"
+              >El mensaje debe tener al menos 10 caracteres.</span
+            >
+          </div>
+          <div class="formulario__botones">
+            <button
+              class="formulario__boton formulario__boton--cancelar"
+              type="reset"
+            >
+              cancelar
+            </button>
+            <button
+              class="formulario__boton formulario__boton--enviar"
+              type="submit"
+            >
+              enviar
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- ========== Fin de Seccción: Contacto ========== -->
+    </main>
+
+    <!-- =================== FIN DE CONTENIDO PRINCIPAL ==================== -->
+
+    <!-- ======================= FOOTER / PIE DE PÁGINA ==================== -->
+    <footer class="pie" role="contentinfo">
+      <div class="pie__contenido-principal">
+        <nav class="pie__nav" aria-label="Navegación secundaria">
+          <ul class="pie__lista">
+            <li class="pie__item">
+              <a class="pie__link" href="#sobre">sobre mi</a>
+            </li>
+            <li class="pie__item">
+              <a class="pie__link" href="#conocimientos">conocimientos</a>
+            </li>
+            <li class="pie__item">
+              <a class="pie__link" href="#proyectos">proyectos</a>
+            </li>
+            <li class="pie__item">
+              <a class="pie__link" href="#contacto">contacto</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="pie__nav--redes" aria-label="Redes sociales">
+          <ul class="pie__lista--redes">
+            <li class="pie__item--redes">
+              <a
+                class="pie__link--redes"
+                href="https://github.com/Antonela89"
+                target="_blank"
+                aria-label="Visita mi perfil de GitHub"
+                ><i
+                  class="fa-brands fa-github pie__icono--redes"
+                  aria-hidden="true"
+                ></i
+              ></a>
+            </li>
+            <li class="pie__item--redes">
+              <a
+                class="pie__link--redes"
+                href="https://www.facebook.com/antonela.borgogno/"
+                target="_blank"
+                aria-label="Visita mi perfil de Facebook"
+                ><i
+                  class="fa-brands fa-facebook pie__icono--redes"
+                  aria-hidden="true"
+                ></i
+              ></a>
+            </li>
+            <li class="pie__item--redes">
+              <a
+                class="pie__link--redes"
+                href="https://www.linkedin.com/in/antonela-borgogno"
+                target="_blank"
+                aria-label="Visita mi perfil de LinkedIn"
+                ><i
+                  class="fa-brands fa-linkedin pie__icono--redes"
+                  aria-hidden="true"
+                ></i
+              ></a>
+            </li>
+            <li class="pie__item--redes">
+              <a
+                class="pie__link--redes"
+                href="https://discord.gg/HGzyS82b"
+                target="_blank"
+                aria-label="Visita mi perfil de Discord"
+                ><i
+                  class="fa-brands fa-discord pie__icono--redes"
+                  aria-hidden="true"
+                ></i
+              ></a>
+            </li>
+            <li class="pie__item--redes">
+              <a
+                class="pie__link--redes"
+                href="mailto:antonelaborgogno@gmail.com"
+                target="_blank"
+                aria-label="Envía un emai"
+                ><i
+                  class="fa-brands fa-google pie__icono--redes"
+                  aria-hidden="true"
+                ></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <p class="pie__parrafo">
+        &copy; 2025 Antonela Borgogono - ADA ITW - Portfolio
+      </p>
+    </footer>
+
+    <!-- ======================= SCRIPT PRINCIPAL ======================== -->
+    <script src="/scripts/main.js"></script>
   </body>
 </html>
